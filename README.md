@@ -1,4 +1,4 @@
 # siris-Kang.github.io
 
-Hello Worl!!
+Hello World!!
 I'm siris-Kang!
