@@ -1,6 +1,5 @@
 ---
 title: "Start GitHub Blog"
-date: 2021-09-04 -0400
 categories: jekyll start
 ---
 
