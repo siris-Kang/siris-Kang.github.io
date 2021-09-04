@@ -20,7 +20,7 @@ title                    : "Juniverse"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "siris-Kang"
-description              : "My project records and pleasant stories"
+description              : "My project records and Pleasant stories"
 url                      : https://siris-Kang.github.io
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -101,11 +101,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "siris-Kang"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I am an **amazing** person."
-  location         : "Somewhere"
-  email            :
+  location         : "Seoul, Korea"
+  email            : "kyungh22@khu.ac.kr"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
