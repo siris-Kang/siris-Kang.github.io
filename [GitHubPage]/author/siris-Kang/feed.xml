@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
+  <link href="https://siris-kang.github.io/author/siris-Kang/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://siris-kang.github.io/" rel="alternate" type="text/html" />
+  <updated>2021-09-07T13:18:17+09:00</updated>
+  <id>https://siris-kang.github.io/author/siris-Kang/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">Ju__niverse | </title>
+  
+
+  
+    <subtitle>My project records and Pleasant stories</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">PooongWallJu</title>
+      <link href="https://siris-kang.github.io/poongwol" rel="alternate" type="text/html" title="PooongWallJu" />
+      <published>2021-09-07T03:45:00+09:00</published>
+      <updated>2021-09-07T03:45:00+09:00</updated>
+      <id>https://siris-kang.github.io/poongwol</id>
+      <content type="html" xml:base="https://siris-kang.github.io/poongwol">&lt;p&gt;바람과 달의 주인, 풍월주.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>siris-Kang</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Interest" />
+      
+
+      
+        <summary type="html">바람과 달의 주인, 풍월주.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Mio Fratello</title>
+      <link href="https://siris-kang.github.io/mio-fratello-copy" rel="alternate" type="text/html" title="Mio Fratello" />
+      <published>2021-09-07T03:40:00+09:00</published>
+      <updated>2021-09-07T03:40:00+09:00</updated>
+      <id>https://siris-kang.github.io/mio-fratello%20copy</id>
+      <content type="html" xml:base="https://siris-kang.github.io/mio-fratello-copy">&lt;p&gt;Mio Fratello, My Brother.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>siris-Kang</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Interest" />
+      
+
+      
+        <summary type="html">Mio Fratello, My Brother.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Introduce of Interest tap</title>
+      <link href="https://siris-kang.github.io/basic-interest" rel="alternate" type="text/html" title="Introduce of Interest tap" />
+      <published>2021-09-06T19:39:00+09:00</published>
+      <updated>2021-09-06T19:39:00+09:00</updated>
+      <id>https://siris-kang.github.io/basic-interest</id>
+      <content type="html" xml:base="https://siris-kang.github.io/basic-interest">&lt;p&gt;just draw my interest things,,&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>siris-Kang</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Interest" />
+      
+
+      
+        <summary type="html">just draw my interest things,,</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Introduce of Project tap</title>
+      <link href="https://siris-kang.github.io/basic-project" rel="alternate" type="text/html" title="Introduce of Project tap" />
+      <published>2021-09-06T19:18:00+09:00</published>
+      <updated>2021-09-06T19:18:00+09:00</updated>
+      <id>https://siris-kang.github.io/basic-project</id>
+      <content type="html" xml:base="https://siris-kang.github.io/basic-project">&lt;p&gt;I’ll do my best on many Projets&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>siris-Kang</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Project" />
+      
+
+      
+        <summary type="html">I’ll do my best on many Projets</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>
