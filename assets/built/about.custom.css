@@ -1,0 +1,184 @@
+.about-shell {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 6.4rem 2.4rem;
+}
+
+.about-intro-card {
+    margin-bottom: 4.8rem;
+    padding: 2.4rem 0;
+    border-radius: 14px;
+    background: #fcfdff;
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 2.4rem;
+    align-items: center;
+}
+
+.about-profile-photo {
+    width: 180px;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid #dde3ea;
+    background: #f3f5f7;
+}
+
+.about-intro-body .about-intro-label {
+    margin: 0 0 0.8rem;
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: #55636f;
+}
+
+.about-intro-body .about-intro-title {
+    margin: 0 0 1.2rem;
+    font-size: 2.8rem;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.about-intro-body p {
+    margin: 0 0 1.2rem;
+}
+
+.about-intro-body p:last-child {
+    margin-bottom: 0;
+}
+
+.about-section {
+    margin-bottom: 9.6rem;
+    padding: 0.4rem 0;
+}
+
+.about-section:last-child {
+    margin-bottom: 0;
+}
+
+.about-section h2 {
+    margin: 0 0 1.6rem;
+    font-size: 2.8rem;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.about-item {
+    margin-top: 2.2rem;
+}
+
+.about-item h3 {
+    margin: 0 0 1.2rem;
+    font-size: 2.2rem;
+    line-height: 1.35;
+    font-weight: 700;
+}
+
+.about-item ul,
+.about-section ul {
+    margin: 0;
+    padding-left: 1.1em;
+}
+
+.about-item li,
+.about-section li {
+    margin: 0.5rem 0;
+}
+
+.skill-gauge-list {
+    margin-top: 0.6rem;
+    display: grid;
+    gap: 1.2rem;
+    max-width: 720px;
+}
+
+.skill-gauge-row {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 1rem;
+    align-items: center;
+    padding: 0.2rem 0;
+}
+
+.skill-gauge-name {
+    font-weight: 500;
+}
+
+.skill-gauge-track {
+    display: block;
+    height: 10px;
+    border-radius: 999px;
+    overflow: hidden;
+    background: #e6ebef;
+}
+
+.skill-gauge-fill {
+    display: block;
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #ff9f1a, #ffc74a);
+}
+
+.gauge-90 {
+    width: 90%;
+}
+
+.gauge-80 {
+    width: 80%;
+}
+
+.gauge-78 {
+    width: 78%;
+}
+
+.gauge-74 {
+    width: 74%;
+}
+
+.gauge-72 {
+    width: 72%;
+}
+
+.gauge-68 {
+    width: 68%;
+}
+
+@media (max-width: 900px) {
+    .about-shell {
+        padding: 4.8rem 1.6rem;
+    }
+
+    .about-intro-card {
+        grid-template-columns: 150px 1fr;
+        gap: 1.8rem;
+        padding: 2rem 0;
+    }
+
+    .about-profile-photo {
+        width: 150px;
+        height: 192px;
+    }
+}
+
+@media (max-width: 700px) {
+    .about-intro-card {
+        grid-template-columns: 1fr;
+        gap: 1.4rem;
+    }
+
+    .about-profile-photo {
+        width: 150px;
+        height: 190px;
+    }
+
+    .about-section h2 {
+        font-size: 2.1rem;
+    }
+
+    .about-item h3 {
+        font-size: 1.65rem;
+    }
+
+    .skill-gauge-row {
+        grid-template-columns: 94px 1fr;
+    }
+}

@@ -1,0 +1,215 @@
+.home-hero {
+    background-image: url(/assets/built/images/sea.jpg);
+}
+
+.profile-summary-feed {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.profile-summary-card {
+    flex: 1 1 100%;
+    min-height: 0;
+}
+
+.profile-summary-link {
+    display: flex;
+    gap: 3.2rem;
+    align-items: center;
+    padding: 2.4rem 3rem;
+    color: inherit;
+    text-decoration: none;
+    height: 100%;
+    margin-left: 1rem;
+}
+
+.profile-summary-link:hover {
+    text-decoration: none;
+}
+
+.profile-passport {
+    width: 220px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #e5e5e5;
+    flex: 0 0 auto;
+    background: #f3f5f7;
+}
+
+.profile-summary-body {
+    min-width: 0;
+    flex: 1 1 auto;
+    padding-right: 1rem;
+    padding-left: 3rem;
+}
+
+.profile-summary-title {
+    margin: 0 0 0.7rem;
+    font-size: 2.1rem;
+}
+
+.profile-summary-line {
+    margin: 1rem 0 0.45rem;
+    font-size: 1.45rem;
+    line-height: 1.7em;
+}
+
+.skill-meter-list {
+    margin-top: 0.25rem;
+    display: grid;
+    gap: 0.35rem;
+    max-width: 420px;
+}
+
+.skill-meter-item {
+    display: grid;
+    grid-template-columns: 88px 1fr;
+    gap: 0.6rem;
+    align-items: center;
+}
+
+.skill-meter-label {
+    font-size: 1.2rem;
+    line-height: 1.2;
+    color: #51606b;
+}
+
+.skill-meter-track {
+    height: 8px;
+    background: #e7edf1;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.skill-meter-fill {
+    display: block;
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #ffaa00, #ffc919);
+}
+
+.gauge-88 {
+    width: 88%;
+}
+
+.gauge-92 {
+    width: 92%;
+}
+
+.gauge-83 {
+    width: 83%;
+}
+
+.gauge-82 {
+    width: 82%;
+}
+
+.gauge-78 {
+    width: 78%;
+}
+
+.gauge-74 {
+    width: 74%;
+}
+
+.gauge-73 {
+    width: 73%;
+}
+
+.gauge-72 {
+    width: 72%;
+}
+
+.gauge-68 {
+    width: 68%;
+}
+
+.gauge-65 {
+    width: 65%;
+}
+
+.projects-header {
+    display: block;
+    margin: 2rem 0 1rem;
+    padding: 0;
+    min-height: 0;
+    max-height: none;
+    text-align: left;
+}
+
+.projects-title {
+    margin: 0 0 0.3rem;
+    font-size: 2.8rem;
+    line-height: 1.3;
+}
+
+.projects-header .site-description {
+    margin: 0;
+    padding: 0;
+}
+
+.bg-advanced {
+    background-image: url(/assets/built/images/advanced.jpg);
+}
+
+.bg-design {
+    background-image: url(/assets/built/images/design.jpg);
+}
+
+.bg-water {
+    background-image: url(/assets/built/images/water.jpg);
+}
+
+.bg-team {
+    background-image: url(/assets/built/images/team.jpg);
+}
+
+.bg-grapes {
+    background-image: url(/assets/built/images/grapes.jpg);
+}
+
+.bg-waves {
+    background-image: url(/assets/built/images/waves.jpg);
+}
+
+.bg-summit {
+    background-image: url(/assets/built/images/summit.jpg);
+}
+
+.bg-bus {
+    background-image: url(/assets/built/images/bus.jpg);
+}
+
+.bg-sky {
+    background-image: url(/assets/built/images/sky.jpg);
+}
+
+.bg-station {
+    background-image: url(/assets/built/images/station.jpg);
+}
+
+.bg-piano {
+    background-image: url(/assets/built/images/piano.jpg);
+}
+
+.bg-sea {
+    background-image: url(/assets/built/images/sea.jpg);
+}
+
+.bg-bear {
+    background-image: url(/assets/built/images/bear.jpg);
+}
+
+@media (max-width: 800px) {
+    .profile-summary-link {
+        flex-direction: column;
+        gap: 1.6rem;
+        padding: 1.8rem;
+        align-items: flex-start;
+    }
+    .profile-passport {
+        width: 180px;
+        height: 220px;
+    }
+}
