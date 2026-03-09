@@ -157,16 +157,16 @@
     padding: 0;
 }
 
-.bg-advanced {
-    background-image: url(/assets/built/images/advanced.jpg);
+.bg-vanguarddt {
+    background-image: url(/assets/built/images/project-vanguarddt-image.jpg);
 }
 
-.bg-orin {
-    background-image: url(/assets/built/images/team.jpg);
+.bg-autowingcar {
+    background-image: url(/assets/built/images/project-autowingcar-image.png);
 }
 
-.bg-design {
-    background-image: url(/assets/built/images/design.jpg);
+.bg-luxtrail {
+    background-image: url(/assets/built/images/project-luxtrail-image.png);
 }
 
 .bg-water {
