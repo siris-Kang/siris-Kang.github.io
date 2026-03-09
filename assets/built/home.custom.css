@@ -64,7 +64,7 @@
 
 .skill-meter-item {
     display: grid;
-    grid-template-columns: 88px 1fr;
+    grid-template-columns: 168px 1fr;
     gap: 0.6rem;
     align-items: center;
 }
@@ -87,6 +87,14 @@
     height: 100%;
     border-radius: 999px;
     background: linear-gradient(90deg, #ffaa00, #ffc919);
+}
+
+.gauge-90 {
+    width: 90%;
+}
+
+.gauge-80 {
+    width: 80%;
 }
 
 .gauge-88 {
@@ -151,6 +159,10 @@
 
 .bg-advanced {
     background-image: url(/assets/built/images/advanced.jpg);
+}
+
+.bg-orin {
+    background-image: url(/assets/built/images/team.jpg);
 }
 
 .bg-design {

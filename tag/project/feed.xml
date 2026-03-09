@@ -1,4 +1,4 @@
-﻿<?xml version='1.0' encoding='utf-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://siris-kang.github.io/tag/project/feed.xml" rel="self" type="application/atom+xml" />
@@ -32,11 +32,11 @@
   
     <entry>
       <title type="html">Introduce of Project tap</title>
-      <link href="https://siris-kang.github.io/projects/basic-project/" rel="alternate" type="text/html" title="Introduce of Project tap" />
+      <link href="https://siris-kang.github.io/projects/vanguard-dt/" rel="alternate" type="text/html" title="Introduce of Project tap" />
       <published>2021-09-06T19:18:00+09:00</published>
       <updated>2021-09-06T19:18:00+09:00</updated>
-      <id>https://siris-kang.github.io/projects/basic-project/</id>
-      <content type="html" xml:base="https://siris-kang.github.io/projects/basic-project/">&lt;p&gt;I?셪l do my best on many Projets&lt;/p&gt;</content>
+      <id>https://siris-kang.github.io/projects/vanguard-dt/</id>
+      <content type="html" xml:base="https://siris-kang.github.io/projects/vanguard-dt/">&lt;p&gt;I?셪l do my best on many Projets&lt;/p&gt;</content>
 
       
       

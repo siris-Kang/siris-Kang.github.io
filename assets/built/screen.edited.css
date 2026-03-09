@@ -92,3 +92,73 @@ textarea,
     font-style: normal;
 }
 
+/* Project detail readability */
+.post-template .post-full-content {
+    font-size: 1.65rem;
+    line-height: 1.85;
+}
+
+.post-template .post-full-content p,
+.post-template .post-full-content ul,
+.post-template .post-full-content ol {
+    margin: 0 0 2.4rem;
+}
+
+.post-template .post-full-content li {
+    margin: 0.8rem 0;
+    line-height: 1.9;
+}
+
+.post-template .post-full-content h2 {
+    margin: 5.2rem 0 2rem;
+    font-size: 3.4rem;
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+}
+
+.post-template .post-full-content h3 {
+    margin: 3.4rem 0 1.4rem;
+    font-size: 2.5rem;
+    line-height: 1.35;
+    font-weight: 700;
+}
+
+.post-template .post-full-content h4 {
+    margin: 2.2rem 0 1rem;
+    font-size: 1.95rem;
+    line-height: 1.5;
+    font-weight: 600;
+    color: #4a5560;
+}
+
+.post-template .post-full-content > h2:first-child {
+    margin-top: 0;
+}
+
+@media (max-width: 800px) {
+    .post-template .post-full-content {
+        font-size: 1.55rem;
+        line-height: 1.8;
+    }
+
+    .post-template .post-full-content h2 {
+        margin-top: 4.2rem;
+        font-size: 2.8rem;
+    }
+
+    .post-template .post-full-content h3 {
+        margin-top: 2.8rem;
+        font-size: 2.2rem;
+    }
+
+    .post-template .post-full-content h4 {
+        margin-top: 1.8rem;
+        font-size: 1.75rem;
+    }
+
+    .post-template .post-full-content li {
+        margin: 0.55rem 0;
+    }
+}
+
