@@ -157,6 +157,83 @@
     padding: 0;
 }
 
+@media (min-width: 795px) {
+    /* Keep all home project cards at the same size (disable Jasper featured-card rule). */
+    .home-template .post-feed.projects-feed-grid .post-card:nth-child(6n+1):not(.no-image):not(.feature-wide) {
+        flex: 1 1 300px;
+        flex-direction: column;
+    }
+
+    .home-template .post-feed.projects-feed-grid .post-card:nth-child(6n+1):not(.no-image):not(.feature-wide) .post-card-image-link {
+        flex: 0 0 auto;
+        border-radius: 5px 5px 0 0;
+    }
+
+    .home-template .post-feed.projects-feed-grid .post-card:nth-child(6n+1):not(.no-image):not(.feature-wide) .post-card-image {
+        position: relative;
+        height: 200px;
+    }
+
+    .home-template .post-feed.projects-feed-grid .post-card:nth-child(6n+1):not(.no-image):not(.feature-wide) .post-card-content {
+        flex: 1 1 auto;
+    }
+
+    .home-template .post-feed.projects-feed-grid .post-card:nth-child(6n+1):not(.no-image):not(.feature-wide) .post-card-content-link {
+        padding: 25px 25px 0;
+    }
+
+    .home-template .post-feed.projects-feed-grid .post-card:nth-child(6n+1):not(.no-image):not(.feature-wide) h2 {
+        font-size: 2rem;
+    }
+
+    .home-template .post-feed.projects-feed-grid .post-card:nth-child(6n+1):not(.no-image):not(.feature-wide) p {
+        font-size: 1.5rem;
+        line-height: 1.6;
+    }
+
+    /* Explicit featured cards on Home projects. */
+    .home-template .post-feed.projects-feed-grid .post-card.feature-wide,
+    .home-template .post-feed.projects-feed-grid .post-card.feature-wide:nth-child(6n+1):not(.no-image) {
+        flex: 1 1 100%;
+        flex-direction: row;
+    }
+
+    .home-template .post-feed.projects-feed-grid .post-card.feature-wide .post-card-image-link,
+    .home-template .post-feed.projects-feed-grid .post-card.feature-wide:nth-child(6n+1):not(.no-image) .post-card-image-link {
+        position: relative;
+        flex: 1 1 auto;
+        border-radius: 5px 0 0 5px;
+    }
+
+    .home-template .post-feed.projects-feed-grid .post-card.feature-wide .post-card-image,
+    .home-template .post-feed.projects-feed-grid .post-card.feature-wide:nth-child(6n+1):not(.no-image) .post-card-image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .home-template .post-feed.projects-feed-grid .post-card.feature-wide .post-card-content,
+    .home-template .post-feed.projects-feed-grid .post-card.feature-wide:nth-child(6n+1):not(.no-image) .post-card-content {
+        flex: 0 1 380px;
+    }
+
+    .home-template .post-feed.projects-feed-grid .post-card.feature-wide .post-card-content-link,
+    .home-template .post-feed.projects-feed-grid .post-card.feature-wide:nth-child(6n+1):not(.no-image) .post-card-content-link {
+        padding: 30px 36px 0;
+    }
+
+    .home-template .post-feed.projects-feed-grid .post-card.feature-wide h2,
+    .home-template .post-feed.projects-feed-grid .post-card.feature-wide:nth-child(6n+1):not(.no-image) h2 {
+        font-size: 2.35rem;
+    }
+
+    .home-template .post-feed.projects-feed-grid .post-card.feature-wide p,
+    .home-template .post-feed.projects-feed-grid .post-card.feature-wide:nth-child(6n+1):not(.no-image) p {
+        font-size: 1.6rem;
+        line-height: 1.6;
+    }
+}
+
 .bg-vanguarddt {
     background-image: url(/assets/built/images/project-vanguarddt-image.jpg);
 }
@@ -169,20 +246,20 @@
     background-image: url(/assets/built/images/project-luxtrail-image.png);
 }
 
-.bg-water {
-    background-image: url(/assets/built/images/water.jpg);
+.bg-movement {
+    background-image: url(/assets/built/images/project-movementtransfer-image.png);
 }
 
-.bg-team {
-    background-image: url(/assets/built/images/team.jpg);
+.bg-vrblowing {
+    background-image: url(/assets/built/images/project-vrblowing-image.png);
 }
 
-.bg-grapes {
-    background-image: url(/assets/built/images/grapes.jpg);
+.bg-dusk {
+    background-image: url(/assets/built/images/project-dusk-image.png);
 }
 
-.bg-waves {
-    background-image: url(/assets/built/images/waves.jpg);
+.bg-pouring {
+    background-image: url(/assets/built/images/project-pouring-image.png);
 }
 
 .bg-summit {
