@@ -110,11 +110,12 @@ textarea,
 }
 
 .post-template .post-full-content h2 {
-    margin: 5.2rem 0 2rem;
-    font-size: 3.0rem;
+    margin: 8.0rem 0 2.5rem;
+    font-size: 2.5rem;
     line-height: 1.2;
     font-weight: 800;
     letter-spacing: -0.01em;
+    color: #454545;
 }
 
 .post-template .post-full-content h3 {
@@ -146,6 +147,79 @@ textarea,
     max-width: none;
 }
 
+.project-overview-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.0rem;
+    margin: 1.8rem 0 3.2rem;
+    align-items: start;
+}
+
+.project-overview-card {
+    margin: 0;
+}
+
+.project-overview-card img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 1px solid #e8edf2;
+    box-shadow: 0 10px 28px rgba(20, 31, 51, 0.08);
+}
+
+.project-overview-card figcaption {
+    margin-top: 0.9rem;
+    color: #6a7681;
+    font-size: 1.35rem;
+    line-height: 1.6;
+}
+
+.project-overview-source {
+    margin-top: 0.1rem;
+    color: #8a94a0;
+    font-size: 1.15rem;
+    line-height: 1.4;
+    letter-spacing: 0;
+}
+
+.project-role-note {
+    margin: 0 0 0.5rem;
+    color: #515961;
+    font-size: 1.5rem;
+    line-height: 1.3;
+}
+
+.post-template .post-full-content .project-role-note p {
+    margin: 0.4rem 0;
+}
+
+.post-template .post-full-content .project-role-note ul {
+    margin: 0.35rem 0 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.post-template .post-full-content .project-role-note li {
+    position: relative;
+    margin: 0.18rem 0;
+    padding-left: 1.1rem;
+    line-height: 1.35;
+}
+
+.post-template .post-full-content .project-role-note li::before {
+    content: "-";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #7a8692;
+}
+
+.post-template .post-full-content h2 + .project-role-note {
+    margin-top: -0.8rem;
+}
+
 @media (max-width: 800px) {
     .post-template .post-full-content {
         font-size: 1.55rem;
@@ -153,8 +227,8 @@ textarea,
     }
 
     .post-template .post-full-content h2 {
-        margin-top: 4.2rem;
-        font-size: 2.8rem;
+        margin-top: 5.0rem;
+        font-size: 2.5rem;
     }
 
     .post-template .post-full-content h3 {
@@ -169,5 +243,13 @@ textarea,
 
     .post-template .post-full-content li {
         margin: 0.55rem 0;
+    }
+
+    .project-overview-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .project-overview-card img {
+        height: 200px;
     }
 }
