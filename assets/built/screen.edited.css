@@ -251,6 +251,65 @@ textarea,
     margin-top: -0.8rem;
 }
 
+.archive-timeline {
+    margin-top: 1.6rem;
+}
+
+.archive-plain-list {
+    margin-top: 1.2rem;
+}
+
+.page-template .post-full-content .archive-plain-list h2 {
+    margin: 0 0 1rem;
+    font-size: 2.8rem;
+    line-height: 1.25;
+}
+
+.page-template .post-full-content .archive-plain-list ul {
+    margin: 0 0 2.8rem;
+}
+
+.page-template .post-full-content .archive-plain-list li {
+    margin: 0 0 0.8rem;
+    font-size: 1.7rem;
+    line-height: 1.55;
+}
+
+.page-template .post-full-content .archive-plain-list li:last-child {
+    margin-bottom: 0;
+}
+
+.archive-year-group {
+    margin-bottom: 3.8rem;
+}
+
+.archive-year-group:last-child {
+    margin-bottom: 0;
+}
+
+.page-template .post-full-content .archive-year-title {
+    margin: 0 0 1.2rem;
+    font-size: 2.8rem;
+    line-height: 1.25;
+}
+
+.archive-year-list {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.page-template .post-full-content .archive-year-list li {
+    margin: 0 0 0.85rem;
+    padding-left: 0;
+    font-size: 1.7rem;
+    line-height: 1.55;
+}
+
+.archive-year-list li:last-child {
+    margin-bottom: 0;
+}
+
 @media (max-width: 800px) {
     .post-template .post-full-content {
         font-size: 1.55rem;
@@ -282,5 +341,21 @@ textarea,
 
     .project-overview-card img {
         height: 200px;
+    }
+
+    .page-template .post-full-content .archive-year-title {
+        font-size: 2.4rem;
+    }
+
+    .page-template .post-full-content .archive-year-list li {
+        font-size: 1.55rem;
+    }
+
+    .page-template .post-full-content .archive-plain-list h2 {
+        font-size: 2.4rem;
+    }
+
+    .page-template .post-full-content .archive-plain-list li {
+        font-size: 1.55rem;
     }
 }

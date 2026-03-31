@@ -183,21 +183,22 @@ html {
     justify-content: center;
     min-width: 110px;
     padding: 0.9rem 1.5rem;
-    border: 1px solid #d6e3ef;
-    border-radius: 999px;
+    border: 1px solid #dfe4e7;
+    border-radius: 30px;
     background: #ffffff;
-    color: #5085b2;
+    color: #51585f;
     font-size: 1.28rem;
     font-weight: 600;
     line-height: 1;
     text-decoration: none;
     box-shadow: 0 10px 24px rgba(31, 54, 79, 0.06);
-    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease, color 0.18s ease;
 }
 
 .project-category-button:hover {
     text-decoration: none;
-    border-color: #5085b2;
+    border-color: #b8c0c6;
+    color: #434a50;
     box-shadow: 0 14px 28px rgba(31, 54, 79, 0.1);
     transform: translateY(-1px);
 }
@@ -230,14 +231,14 @@ html {
     gap: 0.35rem;
     align-items: center;
     margin: 0.45rem 0 1.05rem;
-    color: #5085b2;
+    color: #6e767d;
     font-size: 1.18rem;
     line-height: 1.45;
     letter-spacing: 0.01em;
 }
 
 .project-card-meta-sep {
-    color: rgba(80, 133, 178, 0.62);
+    color: rgba(110, 118, 125, 0.58);
 }
 
 .home-template .project-category-section .projects-feed-grid {
@@ -360,14 +361,14 @@ html {
     position: fixed;
     right: 2.4rem;
     bottom: 2.4rem;
-    z-index: 50;
+    z-index: 1001;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     width: 5rem;
     height: 5rem;
     border-radius: 999px;
-    background: rgba(80, 133, 178, 0.94);
+    background: #9ca2a7f0;
     color: #fff;
     font-size: 2.1rem;
     font-weight: 700;
@@ -375,13 +376,14 @@ html {
     box-shadow: 0 14px 28px rgba(40, 65, 94, 0.2);
     opacity: 0;
     visibility: hidden;
+    pointer-events: none;
     transform: translateY(12px);
     transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s ease, background-color 0.22s ease;
 }
 
 .back-to-categories-button:hover,
 .back-to-categories-button:focus-visible {
-    background: #3f719a;
+    background: #777f86;
     color: #fff;
     transform: translateY(0);
 }
@@ -389,6 +391,7 @@ html {
 .back-to-categories-button.is-visible {
     opacity: 1;
     visibility: visible;
+    pointer-events: auto;
     transform: translateY(0);
 }
 
