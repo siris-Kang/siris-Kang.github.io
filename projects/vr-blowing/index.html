@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
     <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
     <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
-    <meta name="description" content="VR Blowing project summary by SIRIS" />
+    <meta name="description" content="입으로 바람을 불어 바람개비를 조작하는 VR 인터랙션 연구" />
     <link rel="canonical" href="https://siris-Kang.github.io/projects/vr-blowing/" />
 </head>
 <body class="post-template noto-sans-kr-siris">
@@ -36,7 +36,7 @@
                 <article class="post-full post page no-image">
                     <header class="post-full-header">
                         <section class="post-full-meta">
-                            <time class="post-full-meta-date" datetime="2023">2023</time>
+                            <time class="post-full-meta-date" datetime="2023">2022 - 2023</time>
                             <span class="date-divider">/</span>
                             <a href='/tag/project/'>PROJECT</a>
                         </section>
@@ -53,50 +53,114 @@
 
                         <h2>1. 프로젝트 개요</h2>
                         <ul>
-                            <li>사용자가 입으로 바람을 불었을 때 바람개비와 탁자 위 바람개비가 실제처럼 반응하도록 구현한 VR 인터랙션 연구</li>
-                            <li>Unity, C# 기반으로 가상환경에서 바람개비 반응 및 회전 동작 구현</li>
-                            <li>IEEE Transactions on Visualization and Computer Graphics 저널 게재, 2저자</li>
+                            <li>사용자가 입으로 바람을 불었을 때 탁자 위 바람개비가 실제처럼 반응하도록 구현한 VR 인터랙션 연구입니다.</li>
+                            <li>Unity와 C# 기반으로 가상환경에서 바람에 반응하는 오브젝트의 물리적 움직임을 구현했습니다.</li>
+                            <li>구현 결과는 IEEE Transactions on Visualization and Computer Graphics에 게재되었고, 저는 2저자로 참여했습니다.</li>
                         </ul>
 
-                        <h3>주요 개발 내용</h3>
+                        <figure class="project-overview-card project-overview-wide">
+                            <img src="/assets/built/images/project-vrblowing-image.png" alt="VR Blowing 실험 장면" />
+                        </figure>
+
+                        <h3>주요 기능</h3>
                         <ul>
-                            <li>바람에 반응하는 바람개비 회전 및 반응 구현</li>
+                            <li>바람에 반응하는 바람개비 움직임 구현</li>
                             <li>중력, 부력, 항력, 바람의 힘을 반영한 물리 모델 적용</li>
-                            <li>VR 사용자 실험 환경 구성 및 평가 진행</li>
+                            <li>VR 환경에서의 사용자 상호작용 실험 구성</li>
+                            <li>IPQ, CAQ, SEQ 기반 사용자 평가와 인터뷰 진행</li>
                         </ul>
 
-                        <h2>2. 나의 역할</h2>
+                        <h2>2. 담당 역할</h2>
                         <ul>
                             <li>관련 논문을 읽고 물리 요소를 분석해 Unity 환경에 구현</li>
                             <li>중력, 부력, 항력, 외력을 고려한 바람개비 반응 로직 개발</li>
-                            <li>실험 환경 구성 및 사용자 평가 전반 참여</li>
-                            <li>IPQ, CAQ, SEQ 설문 및 인터뷰 결과 정리</li>
+                            <li>VR 실험 환경 구성 및 사용자 평가 전반 참여</li>
+                            <li>IPQ, CAQ, SEQ 설문과 인터뷰 결과 정리</li>
                         </ul>
 
-                        <h2>3. 트러블슈팅</h2>
-                        <h3>1) 바람개비 반응의 비현실성</h3>
-                        <h4>문제</h4>
-                        <p>초기에는 바람개비 반응이 어색하고 실제 바람에 반응하는 느낌이 부족했음</p>
-                        <h4>원인 분석</h4>
+                        <h2>3. 사용 기술</h2>
+                        <h3>Unity</h3>
                         <ul>
-                            <li>단순 이동/회전만으로는 바람개비의 자연스러운 반응을 표현하기 어려웠음</li>
-                            <li>실제 반응에는 중력, 부력, 항력, 외력이 함께 작용함을 확인</li>
-                        </ul>
-                        <h4>해결</h4>
-                        <ul>
-                            <li>유체 속 물체의 움직임 관련 논문을 찾아 핵심 물리 요소를 반영</li>
-                            <li>Unity에서 중력, 부력, 항력, 바람의 힘을 함께 적용해 더 자연스러운 움직임 구현</li>
+                            <li>VR 환경과 상호작용 오브젝트를 빠르게 구성하고 반복 실험하기 위해 사용했습니다.</li>
+                            <li>가상 공간 배치와 물리 기반 상호작용을 함께 다루기에 적합했습니다.</li>
                         </ul>
 
-                        <h3>2) 구현 결과의 검증 필요</h3>
-                        <h4>문제</h4>
-                        <p>구현만으로는 사용자가 실제처럼 느끼는지 확인하기 어려웠음</p>
-                        <h4>원인 분석</h4>
-                        <p>물리적으로 맞아 보여도 사용자 체감은 다를 수 있어 정량적 검증이 필요했음</p>
+                        <h3>C#</h3>
+                        <ul>
+                            <li>물리 요소를 계산하고 바람개비의 반응 로직을 구현하기 위해 사용했습니다.</li>
+                            <li>Unity 내 상호작용 스크립트와 실험 흐름을 연결하기에 적합했습니다.</li>
+                        </ul>
+
+                        <h3>물리 기반 모델링</h3>
+                        <ul>
+                            <li>단순 애니메이션이 아니라 실제와 유사한 반응을 만들기 위해 중력, 부력, 항력, 외력을 함께 고려했습니다.</li>
+                            <li>사용자가 느끼는 현실감을 높이기 위해 물리 요소를 중심으로 상호작용을 설계했습니다.</li>
+                        </ul>
+
+                        <h3>사용자 평가(IPQ, CAQ, SEQ)</h3>
+                        <ul>
+                            <li>구현 결과가 실제처럼 느껴지는지 정량적으로 검증하기 위해 설문과 인터뷰를 진행했습니다.</li>
+                            <li>단순 구현에서 끝나지 않고 사용자 체감까지 평가하는 연구 흐름을 구성할 수 있었습니다.</li>
+                        </ul>
+
+                        <h2>4. 구현 사항</h2>
+                        <ul>
+                            <li>바람을 불었을 때 바람개비가 회전하고 반응하는 VR 인터랙션 로직을 구현했습니다.</li>
+                            <li>중력, 부력, 항력, 바람의 힘을 함께 반영해 보다 자연스러운 움직임을 만들었습니다.</li>
+                            <li>VR 사용자 실험 환경을 구성하고, 평가용 시나리오와 설문 흐름을 준비했습니다.</li>
+                            <li>설문 및 인터뷰 결과를 정리해 구현 방식의 효과를 분석했습니다.</li>
+                        </ul>
+
+                        <h2>5. 문제 해결 사례</h2>
+                        <h3>1) 바람개비 반응이 비현실적으로 느껴지던 문제</h3>
+                        <h4>상황</h4>
+                        <p>초기 구현에서는 바람개비의 움직임이 단순해 실제 바람에 반응하는 느낌이 부족했습니다.</p>
+
                         <h4>해결</h4>
                         <ul>
-                            <li>IPQ, CAQ, SEQ 설문과 주관식 인터뷰를 포함한 사용자 평가 진행</li>
-                            <li>구현 방식에 대해 바람을 부는 동작이 더 현실적으로 느껴진다는 응답을 85% 확보</li>
+                            <li>단순 이동이나 회전만으로는 부족하다고 판단하고, 관련 논문을 찾아 필요한 물리 요소를 정리했습니다.</li>
+                            <li>Unity 환경에서 중력, 부력, 항력, 바람의 힘을 함께 반영하도록 로직을 수정했습니다.</li>
+                        </ul>
+
+                        <h4>성과</h4>
+                        <ul>
+                            <li>바람개비의 반응이 이전보다 더 자연스럽고 설득력 있게 보이도록 개선했습니다.</li>
+                            <li>단순 인터랙션이 아니라 물리 기반 상호작용으로 연구 방향을 구체화할 수 있었습니다.</li>
+                        </ul>
+
+                        <h4>의미</h4>
+                        <ul>
+                            <li>VR 인터랙션에서 시각적 연출보다 사용자가 체감하는 자연스러움이 더 중요할 수 있다는 점을 확인했습니다.</li>
+                            <li>현실감을 높이기 위해서는 구현 단계에서 물리 모델을 구조적으로 반영해야 한다는 기준을 얻었습니다.</li>
+                        </ul>
+
+                        <h3>2) 구현 결과가 실제처럼 느껴지는지 검증이 필요하던 문제</h3>
+                        <h4>상황</h4>
+                        <p>구현 자체는 가능했지만, 사용자가 실제처럼 느끼는지까지는 코드만으로 판단하기 어려웠습니다.</p>
+
+                        <h4>해결</h4>
+                        <ul>
+                            <li>IPQ, CAQ, SEQ 설문과 주관식 인터뷰를 포함한 사용자 평가를 설계했습니다.</li>
+                            <li>구현 방식에 대한 체감 반응을 정량·정성적으로 함께 수집했습니다.</li>
+                        </ul>
+
+                        <h4>성과</h4>
+                        <ul>
+                            <li>바람을 부는 동작이 더 현실적으로 느껴진다는 응답을 85% 확보했습니다.</li>
+                            <li>연구 결과를 사용자 체감 기준으로 설명할 수 있는 근거를 마련했습니다.</li>
+                        </ul>
+
+                        <h4>의미</h4>
+                        <ul>
+                            <li>연구형 프로젝트에서는 구현 완성도만큼 검증 설계도 중요하다는 점을 배웠습니다.</li>
+                            <li>기술 구현과 사용자 평가를 함께 다루는 연구 경험을 쌓을 수 있었습니다.</li>
+                        </ul>
+
+                        <h2>6. 성과 및 결과</h2>
+                        <ul>
+                            <li>물리 기반 VR 인터랙션을 직접 구현하고, 사용자 평가까지 포함한 연구 경험을 축적했습니다.</li>
+                            <li>IEEE TVCG 게재 논문에 2저자로 참여하며 구현과 실험 전반에 기여했습니다.</li>
+                            <li>현실감을 높이는 상호작용 설계와 검증 과정을 함께 경험했습니다.</li>
                         </ul>
                     </section>
                 </article>
@@ -114,5 +178,3 @@
     </div>
 </body>
 </html>
-
-

@@ -12,6 +12,10 @@ body {
 .site-description {
     font-size: 1.8rem;
 }
+.post-template .post-full-title {
+    font-size: 4.1rem;
+    line-height: 1.16;
+}
 .site-main .inner {
     max-width: 860px;
 }
@@ -47,6 +51,9 @@ body {
     line-height: 1.6;
 }
 @media (max-width: 800px) {
+    .post-template .post-full-title {
+        font-size: 3.2rem;
+    }
     .post-full-content {
         font-size: 1.5rem;
     }
@@ -62,19 +69,28 @@ body {
 :root {
     --siris-ui-font: "Noto Sans KR", sans-serif;
 }
+html,
 body,
 input,
 button,
 select,
 textarea,
+.site-nav-logo,
 .site-title,
 .site-description,
+.post-full-title,
+.post-full-meta,
+.post-full-meta a,
 .nav li a,
+.post-card-content-link,
+.post-card-content-link *,
 .post-card-tags,
 .post-card-title,
 .post-card-excerpt,
+.post-card-excerpt *,
 .post-card-meta,
 .post-full-content,
+.post-full-content *,
 .post-full-content p,
 .post-full-content li,
 .post-full-content blockquote,
@@ -159,6 +175,11 @@ textarea,
     margin: 0;
 }
 
+.project-overview-wide {
+    text-align: center;
+    margin: 1.6rem auto 2.8rem;
+}
+
 .project-overview-card img {
     display: block;
     width: 100%;
@@ -167,6 +188,16 @@ textarea,
     border-radius: 5px;
     border: 1px solid #e8edf2;
     box-shadow: 0 10px 28px rgba(20, 31, 51, 0.08);
+}
+
+.project-overview-wide img {
+    width: auto;
+    max-width: min(100%, 64rem);
+    height: auto;
+    max-height: 28rem;
+    margin: 0 auto;
+    object-fit: contain;
+    background: transparent;
 }
 
 .project-overview-card figcaption {

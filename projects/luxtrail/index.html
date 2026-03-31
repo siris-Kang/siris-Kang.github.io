@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
     <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
     <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
-    <meta name="description" content="LuxTrail project summary by SIRIS" />
+    <meta name="description" content="스터디원의 백준 풀이 현황을 한 페이지에서 확인하는 웹 프로젝트" />
     <link rel="canonical" href="https://siris-Kang.github.io/projects/luxtrail/" />
 </head>
 <body class="post-template noto-sans-kr-siris">
@@ -44,45 +44,96 @@
                         <p class="site-description">스터디원의 백준 풀이 현황을 한 페이지에서 확인하는 웹 프로젝트</p>
                     </header>
                     <section class="post-full-content">
-                        <h2>0. 프로젝트 파일 링크</h2>
-                        <ul>
-                            <p>
-                            <a href="https://github.com/siris-Kang/Luxtrail" target="_blank" rel="noopener">
-                                <img src="https://api.iconify.design/simple-icons:github.svg?color=111111" alt="" width="15" height="15" style="vertical-align:-2px;margin-right:6px;" /> LuxTrail 깃허브 링크
+                        <h2>0. 프로젝트 소개</h2>
+                        <p>
+                            <a href="https://github.com/siris-Kang/Luxtrail.git" target="_blank" rel="noopener">
+                                <img src="https://api.iconify.design/simple-icons:github.svg?color=111111" alt="" width="15" height="15" style="vertical-align:-2px;margin-right:6px;" /> LuxTrail GitHub
                             </a>
                         </p>
-                        </ul>
 
                         <h2>1. 프로젝트 개요</h2>
                         <ul>
-                            <li>스터디원의 백준 풀이 현황을 한 페이지에서 확인하는 웹 프로젝트</li>
-                            <li>Solved.ac 비공식 API를 활용해 당일 풀이 여부, 특정 문제 풀이 여부, 당일 랭킹 기능 구현</li>
+                            <li>스터디원의 백준 풀이 현황을 한 페이지에서 빠르게 확인할 수 있도록 만든 웹 프로젝트입니다.</li>
+                            <li>매일 누가 문제를 풀었는지, 특정 문제를 누가 해결했는지, 당일 랭킹이 어떻게 바뀌는지 한 화면에서 보는 것이 목적이었습니다.</li>
+                            <li>크롤링 대신 solved.ac 비공식 API를 활용해 정책상 무리가 없는 방식으로 구조를 다시 설계했습니다.</li>
                         </ul>
 
-                        <h3>주요 개발 내용</h3>
+                        <figure class="project-overview-card project-overview-wide">
+                            <img src="/assets/built/images/project-luxtrail-image.png" alt="LuxTrail 서비스 화면" />
+                        </figure>
+
+                        <h3>주요 기능</h3>
                         <ul>
-                            <li>Solved.ac 비공식 API 연동</li>
-                            <li>당일 풀이 여부 확인 기능 구현</li>
-                            <li>특정 문제 풀이 여부 조회 기능 구현</li>
-                            <li>당일 랭킹 기능 구현</li>
+                            <li>스터디원 계정 등록 및 당일 풀이 여부 확인</li>
+                            <li>특정 문제 번호 기준 풀이 여부 조회</li>
+                            <li>당일 랭킹 확인 기능</li>
+                            <li>한 페이지에서 여러 기능을 분리해 볼 수 있는 대시보드형 UI 구성</li>
                         </ul>
 
-                        <h2>2. 나의 역할</h2>
+                        <h2>2. 담당 역할</h2>
                         <ul>
-                            <li>서비스 기획</li>
+                            <li>서비스 기획과 기능 구성 방향 정리</li>
                             <li>API 문서 분석 및 데이터 수집 구조 설계</li>
-                            <li>풀이 여부 확인 / 특정 문제 조회 / 랭킹 기능 구현</li>
+                            <li>풀이 여부 확인, 특정 문제 조회, 랭킹 기능 구현</li>
+                            <li>한 화면에서 상태를 빠르게 확인할 수 있는 UI 구성</li>
                         </ul>
 
-                        <h2>3. 트러블슈팅</h2>
+                        <h2>3. 사용 기술</h2>
+                        <h3>Solved.ac Unofficial API</h3>
                         <ul>
-                            <li>초기에는 백준 크롤링으로 구현하려 했으나, 정책상 적절하지 않음을 확인하고 해당 방식 제거</li>
-                            <li>Solved.ac 비공식 API 기반으로 구조를 전환하여 기능을 재설계</li>
-                            <p>
-                            <a href="https://solvedac.github.io/unofficial-documentation/#/" target="_blank" rel="noopener">
-                                Solved.ac 비공식 API 페이지
-                            </a>
-                        </p>
+                            <li>백준 사용자 정보와 문제 풀이 데이터를 안정적으로 조회하기 위해 사용했습니다.</li>
+                            <li>크롤링보다 정책적으로 안전하고, 필요한 데이터를 명시적으로 가져올 수 있어 구조를 단순화할 수 있었습니다.</li>
+                        </ul>
+
+                        <h3>JavaScript</h3>
+                        <ul>
+                            <li>API 응답 데이터를 기능별로 가공하고 화면에 반영하기 위해 사용했습니다.</li>
+                            <li>당일 풀이 여부, 문제 검색, 랭킹 결과를 한 페이지 안에서 동적으로 다루기에 적합했습니다.</li>
+                        </ul>
+
+                        <h3>HTML / CSS</h3>
+                        <ul>
+                            <li>스터디원이 자주 확인하는 서비스인 만큼, 한눈에 읽히는 단순한 대시보드 UI를 구성하기 위해 사용했습니다.</li>
+                            <li>입력 영역, 검색 영역, 랭킹 영역을 나눠 정보 구조를 직관적으로 보이게 했습니다.</li>
+                        </ul>
+
+                        <h2>4. 구현 사항</h2>
+                        <ul>
+                            <li>스터디원 계정을 등록하고 당일 풀이 여부를 확인하는 흐름을 구현했습니다.</li>
+                            <li>문제 번호를 입력하면 특정 문제를 누가 풀었는지 조회할 수 있도록 구성했습니다.</li>
+                            <li>API 응답 데이터를 정리해 당일 랭킹을 계산하고 UI에 반영했습니다.</li>
+                            <li>기능별 영역을 분리한 대시보드 화면을 구성해 한 페이지에서 전체 현황을 볼 수 있게 했습니다.</li>
+                        </ul>
+
+                        <h2>5. 문제 해결 사례</h2>
+                        <h3>1) 초기 크롤링 방식이 적절하지 않았던 문제</h3>
+                        <h4>상황</h4>
+                        <p>초기에는 백준 페이지를 직접 크롤링해 필요한 정보를 수집하는 방향으로 구현을 시도했습니다.</p>
+
+                        <h4>해결</h4>
+                        <ul>
+                            <li>서비스 정책과 유지보수 관점에서 크롤링 방식이 적절하지 않다는 점을 확인했습니다.</li>
+                            <li>구조를 solved.ac 비공식 API 기반으로 전환하고, 기능 설계를 API 응답 형태에 맞춰 다시 정리했습니다.</li>
+                            <li>조회 기능별로 필요한 데이터와 UI 반영 방식을 다시 나누어 설계했습니다.</li>
+                        </ul>
+
+                        <h4>성과</h4>
+                        <ul>
+                            <li>정책적으로 무리가 적고 유지 가능한 구조로 프로젝트를 재정비했습니다.</li>
+                            <li>당일 풀이 여부, 문제 조회, 랭킹 기능을 안정적으로 구현할 수 있었습니다.</li>
+                        </ul>
+
+                        <h4>의미</h4>
+                        <ul>
+                            <li>기능 구현 속도보다 데이터 수집 방식의 적절성과 지속 가능성이 더 중요할 수 있다는 점을 배웠습니다.</li>
+                            <li>외부 서비스를 활용하는 프로젝트에서는 정책과 구조를 함께 고려해야 한다는 기준을 얻었습니다.</li>
+                        </ul>
+
+                        <h2>6. 성과 및 결과</h2>
+                        <ul>
+                            <li>스터디원의 풀이 현황을 한 페이지에서 바로 확인할 수 있는 웹 도구를 구현했습니다.</li>
+                            <li>API 문서 분석부터 기능 설계, 화면 구성까지 이어지는 웹 서비스 제작 경험을 쌓았습니다.</li>
+                            <li>관련 링크: <a href="https://github.com/siris-Kang/Luxtrail" target="_blank" rel="noopener"><img src="https://api.iconify.design/simple-icons:github.svg?color=111111" alt="" width="15" height="15" style="vertical-align:-2px;margin-right:6px;" />LuxTrail GitHub</a> / <a href="https://solvedac.github.io/unofficial-documentation/#/" target="_blank" rel="noopener">Solved.ac 비공식 API 문서</a></li>
                         </ul>
                     </section>
                 </article>
@@ -100,4 +151,3 @@
     </div>
 </body>
 </html>
-
