@@ -15,6 +15,11 @@ html {
     max-width: 760px;
 }
 
+.tag-template.home-template .site-nav {
+    position: relative;
+    top: 0;
+}
+
 .profile-summary-feed {
     margin-top: 1rem;
     margin-bottom: 0.5rem;
