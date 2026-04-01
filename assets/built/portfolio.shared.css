@@ -1,0 +1,293 @@
+:root {
+    --siris-ui-font: "Noto Sans KR", sans-serif;
+    --siris-color-bg: #ffffff;
+    --siris-color-text: #222;
+    --siris-color-text-soft: #4b5762;
+    --siris-color-title: #45505a;
+    --siris-color-meta: #6b7782;
+    --siris-color-muted: #7d8891;
+    --siris-color-subtle: #97a0a8;
+    --siris-color-border: #dfe4e7;
+    --siris-color-card-bg: #fcfdff;
+    --siris-header-image: url(/assets/built/images/sea.jpg);
+}
+
+.noto-sans-kr-siris {
+    font-family: var(--siris-ui-font);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+html,
+body,
+input,
+button,
+select,
+textarea,
+.site-nav-logo,
+.site-title,
+.site-description,
+.post-full-title,
+.post-full-meta,
+.post-full-meta a,
+.nav li a,
+.post-card-content-link,
+.post-card-content-link *,
+.post-card-tags,
+.post-card-title,
+.post-card-excerpt,
+.post-card-excerpt *,
+.post-card-meta,
+.post-full-content,
+.post-full-content *,
+.post-full-content p,
+.post-full-content li,
+.post-full-content blockquote,
+.post-full-content h1,
+.post-full-content h2,
+.post-full-content h3,
+.post-full-content h4,
+.post-full-content h5,
+.post-full-content h6,
+.pagination,
+.site-footer,
+.site-footer * {
+    font-family: var(--siris-ui-font);
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: var(--siris-color-text);
+    background-color: var(--siris-color-bg);
+}
+
+.site-main .inner {
+    max-width: 860px;
+}
+
+.site-description {
+    font-size: 1.8rem;
+}
+
+.page-template .site-header,
+.post-template .site-header,
+.author-template .site-header,
+.tag-template .site-header {
+    padding-top: 0;
+    padding-bottom: 0;
+    background-image: var(--siris-header-image);
+    background-position: center 42%;
+}
+
+.page-template .site-header .inner,
+.post-template .site-header .inner,
+.author-template .site-header .inner,
+.tag-template .site-header .inner {
+    display: flex;
+    align-items: flex-end;
+    min-height: 170px;
+}
+
+.page-template .site-header .site-nav,
+.post-template .site-header .site-nav,
+.author-template .site-header .site-nav,
+.tag-template .site-header .site-nav {
+    width: 100%;
+    padding-bottom: 1.6rem;
+}
+
+.page-template .site-header .site-nav-left,
+.post-template .site-header .site-nav-left,
+.author-template .site-header .site-nav-left,
+.tag-template .site-header .site-nav-left {
+    align-items: flex-end;
+}
+
+.page-template .site-header:before,
+.post-template .site-header:before,
+.author-template .site-header:before,
+.tag-template .site-header:before {
+    background: rgba(0, 0, 0, 0.32);
+}
+
+.page-template .site-header:after,
+.post-template .site-header:after,
+.author-template .site-header:after,
+.tag-template .site-header:after {
+    height: 120px;
+    background: linear-gradient(rgba(0, 0, 0, 0.18), transparent);
+}
+
+.page-template .page-hero-content,
+.tag-template .project-hero-content {
+    padding: 6.2rem 4vw 7.2rem;
+    min-height: 0;
+    max-height: 300px;
+    margin-bottom: 0.8rem;
+}
+
+.page-template .post-full-header,
+.post-template .post-full-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: clamp(7.2rem, 10vw, 12rem) 4vw clamp(4.8rem, 8vw, 7rem);
+    min-height: clamp(220px, 26vw, 320px);
+    max-width: 1040px;
+    text-align: center;
+}
+
+.page-template .post-full.post.page.no-image {
+    padding-top: 0;
+}
+
+.page-template .post-full-header .post-full-meta,
+.post-template .post-full-header .post-full-meta {
+    margin-bottom: 1.6rem;
+    color: var(--siris-color-muted);
+}
+
+.page-template .post-full-title,
+.post-template .post-full-title {
+    margin: 0;
+    padding: 0;
+    font-size: clamp(3.8rem, 5vw, 5.2rem);
+    line-height: 1.12;
+    font-weight: 700;
+    letter-spacing: -0.035em;
+    color: var(--siris-color-title);
+}
+
+.page-template .post-full-header .site-description,
+.post-template .post-full-header .site-description {
+    margin: 1.4rem 0 0;
+    padding: 0;
+    font-size: clamp(1.9rem, 2.1vw, 2.4rem);
+    line-height: 1.45;
+    font-weight: 300;
+    color: var(--siris-color-subtle);
+}
+
+.post-template .post-full-header {
+    padding: 4.8rem 3vw 6.4rem;
+    min-height: 0;
+}
+
+.post-template .post-full-title {
+    font-size: 4.1rem;
+    line-height: 1.16;
+    letter-spacing: -0.02em;
+}
+
+.post-template .post-full-header .site-description {
+    margin-top: 1rem;
+    font-size: 1.8rem;
+    line-height: 1.5;
+}
+
+.post-full-content {
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: var(--siris-color-text);
+}
+
+.post-full-content p {
+    margin-bottom: 1.6rem;
+}
+
+.post-full-content h1 {
+    font-size: 4rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+
+.post-full-content h2 {
+    font-size: 2.8rem;
+    line-height: 1.3;
+    margin-bottom: 1.6rem;
+}
+
+.post-full-content h3,
+.post-full-content h4 {
+    font-size: 2rem;
+    line-height: 1.35;
+    margin-bottom: 1.2rem;
+    color: var(--siris-color-title);
+}
+
+.page-template .page-hero-content .site-title,
+.tag-template .project-hero-content .site-title,
+.profile-summary-title,
+.projects-title,
+.category-title,
+.home-template .project-category-section .projects-feed-grid .post-card .post-card-title,
+.home-template .project-category-section .projects-feed-grid .post-card:nth-child(6n+1):not(.no-image) .post-card-title,
+.about-intro-body .about-intro-title,
+.about-section h2,
+.about-item h3,
+.skill-category-title,
+.page-template .post-full-content .archive-plain-list h2,
+.page-template .post-full-content .archive-year-title {
+    color: var(--siris-color-title);
+}
+
+.about-intro-body .about-intro-label,
+.about-intro-body p,
+.about-item-date,
+.about-item-note,
+.about-publication-meta,
+.about-item li {
+    color: var(--siris-color-text);
+}
+
+.about-item h3 a,
+.about-item h3 a:hover {
+    color: inherit;
+}
+
+.page-template .post-full-content .archive-plain-list li a,
+.page-template .post-full-content .archive-year-list li a {
+    color: var(--siris-color-title);
+}
+
+@media (max-width: 800px) {
+    .page-template .post-full-header,
+    .post-template .post-full-header {
+        padding: 5.6rem 1.8rem 3.6rem;
+        min-height: 180px;
+    }
+
+    .page-template .post-full-title,
+    .post-template .post-full-title {
+        font-size: 3.2rem;
+    }
+
+    .post-template .post-full-header {
+        padding: 3.6rem 1.8rem 4.8rem;
+        min-height: 0;
+    }
+
+    .post-full-content {
+        font-size: 1.5rem;
+    }
+
+    .page-template .site-header .inner,
+    .post-template .site-header .inner,
+    .author-template .site-header .inner,
+    .tag-template .site-header .inner {
+        min-height: 130px;
+    }
+
+    .page-template .site-header .site-nav,
+    .post-template .site-header .site-nav,
+    .author-template .site-header .site-nav,
+    .tag-template .site-header .site-nav {
+        padding-bottom: 1.2rem;
+    }
+}
