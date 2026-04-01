@@ -424,6 +424,10 @@ html {
     background-image: url(/assets/built/images/project-dusk-image.png);
 }
 
+.bg-mausoleum {
+    background-image: url(/assets/built/images/station.jpg);
+}
+
 .bg-pouring {
     background-image: url(/assets/built/images/project-pouring-image.png);
 }
