@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -24,8 +24,8 @@
     <li class="nav-home" role="menuitem"><a href="/">Home</a></li>
     <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
     <li class="nav-project" role="menuitem"><a href="/tag/project/">Project</a></li>
-    <li class="nav-archive" role="menuitem"><a href="/archive/">All Posts</a></li>
-    <li class="nav-archive" role="menuitem"><a href="/author-archive/">Posts by Tag</a></li>
+    <li class="nav-archive" role="menuitem"><a href="/archive/">Archive</a></li>
+    <li class="nav-archive" role="menuitem"><a href="/author-archive/">Categories</a></li>
 </ul>
             </div>
         </nav>
@@ -34,10 +34,10 @@
 
         <main id="site-main" class="site-main outer" role="main">
             <div class="inner">
+                <div class="site-header-content page-hero-content">
+                    <h1 class="site-title">About SIRIS</h1>
+                </div>
                 <article class="post-full post page no-image">
-                    <header class="post-full-header">
-                        <h1 class="post-full-title">About SIRIS</h1>
-                    </header>
                     <section class="post-full-content">
                         <div class="about-shell">
                             <section class="about-intro-card">
@@ -51,7 +51,7 @@
                                 </div>
                             </section>
 
-                            <section class="about-section">
+                            <section class="about-section about-skills-section">
                                 <h2>🔨 Skills</h2>
 
                                 <div class="skill-category">
@@ -67,7 +67,7 @@
                                         </div>
                                         <div class="skill-gauge-row">
                                             <span class="skill-gauge-name">Python</span>
-                                            <span class="skill-gauge-track"><span class="skill-gauge-fill gauge-70"></span></span>
+                                            <span class="skill-gauge-track"><span class="skill-gauge-fill gauge-60"></span></span>
                                         </div>
                                     </div>
                                 </div>
@@ -80,16 +80,8 @@
                                             <span class="skill-gauge-track"><span class="skill-gauge-fill gauge-80"></span></span>
                                         </div>
                                         <div class="skill-gauge-row">
-                                            <span class="skill-gauge-name">NUCLEO-F103RB</span>
-                                            <span class="skill-gauge-track"><span class="skill-gauge-fill gauge-80"></span></span>
-                                        </div>
-                                        <div class="skill-gauge-row">
                                             <span class="skill-gauge-name">FreeRTOS</span>
                                             <span class="skill-gauge-track"><span class="skill-gauge-fill gauge-70"></span></span>
-                                        </div>
-                                        <div class="skill-gauge-row">
-                                            <span class="skill-gauge-name">UART / MQTT</span>
-                                            <span class="skill-gauge-track"><span class="skill-gauge-fill gauge-80"></span></span>
                                         </div>
                                     </div>
                                 </div>
@@ -98,7 +90,7 @@
                                     <h3 class="skill-category-title">🔧 Tools / Collaboration</h3>
                                     <div class="skill-gauge-list">
                                         <div class="skill-gauge-row">
-                                            <span class="skill-gauge-name">Git / GitHub</span>
+                                            <span class="skill-gauge-name">Git</span>
                                             <span class="skill-gauge-track"><span class="skill-gauge-fill gauge-90"></span></span>
                                         </div>
                                         <div class="skill-gauge-row">
@@ -109,10 +101,6 @@
                                             <span class="skill-gauge-name">STM32CubeIDE</span>
                                             <span class="skill-gauge-track"><span class="skill-gauge-fill gauge-80"></span></span>
                                         </div>
-                                        <div class="skill-gauge-row">
-                                            <span class="skill-gauge-name">CMake</span>
-                                            <span class="skill-gauge-track"><span class="skill-gauge-fill gauge-70"></span></span>
-                                        </div>
                                     </div>
                                 </div>
                             </section>
@@ -121,31 +109,46 @@
                                 <h2>🎓 Education</h2>
                                 <div class="about-item">
                                     <h3>Bachelor of Engineering in Electronic Engineering - Kyung Hee University, South Korea | 2025</h3>
-                                    <ul>
-                                        <li>본전공: 전자공학, 공학사</li>
-                                    </ul>
+                                    <p class="about-item-note">본전공: 전자공학, 공학사</p>
                                 </div>
                                 <div class="about-item">
                                     <h3>Bachelor of Engineering in Software Convergence - Kyung Hee University, South Korea | 2025</h3>
-                                    <ul>
-                                        <li>다전공: 소프트웨어융합학, 공학사</li>
-                                    </ul>
+                                    <p class="about-item-note">복수전공: 소프트웨어융합학, 공학사</p>
                                 </div>
                             </section>
 
                             <section class="about-section">
                                 <h2>💼 Experience</h2>
                                 <div class="about-item">
-                                    <h3>IIIXR 연구실 학부연구생 (2021.03 - 2022.06)</h3>
-                                    <ul>
-                                        <li>경희대학교 IIIXR 연구실에서 약 1년간 학부연구생 활동</li>
-                                    </ul>
+                                    <h3>삼성청년SW·AI아카데미(SSAFY,싸피) 14기</h3>
+                                    <p class="about-item-date">2025.07 - 2026.06</p>
+                                    <p class="about-item-note">임베디드 심화 교육과 팀 협업 기반 프로젝트 수행</p>
                                 </div>
                                 <div class="about-item">
-                                    <h3>어학연수 경험 (2024.03 - 2024.06)</h3>
-                                    <ul>
-                                        <li>3개월간의 필리핀 어학연수를 통해 영어 회화 능력 향상</li>
-                                    </ul>
+                                    <h3>어학연수</h3>
+                                    <p class="about-item-date">2024.03 - 2024.06</p>
+                                    <p class="about-item-note">3개월간의 필리핀 어학연수를 통해 영어 회화 능력 향상</p>
+                                </div>
+                                <div class="about-item">
+                                    <h3>IIIXR 연구실 학부연구생</h3>
+                                    <p class="about-item-date">2021.03 - 2022.06</p>
+                                    <p class="about-item-note">경희대학교 IIIXR 연구실에서 약 1년간 학부연구생 활동</p>
+                                </div>
+                                
+                            </section>
+
+                            <section class="about-section">
+                                <h2>📄 Publication</h2>
+                                <div class="about-item">
+                                    <h3>
+                                        <a href="https://ieeexplore.ieee.org/abstract/document/10023999" target="_blank" rel="noopener">
+                                            VR Blowing: a Physically Plausible Interaction Method for Blowing Air in Virtual Reality
+                                        </a>
+                                    </h3>
+                                    <p class="about-publication-meta">IEEE Transactions on Visualization and Computer Graphics (TVCG) | 2nd Author</p>
+                                    <p class="about-publication-link">
+                                        <a href="/projects/vr-blowing/">VR Blowing</a>
+                                    </p>
                                 </div>
                             </section>
 
@@ -173,3 +176,4 @@
     </div>
 </body>
 </html>
+

@@ -12,12 +12,131 @@ body {
 .site-description {
     font-size: 1.8rem;
 }
+.page-template .page-hero-content,
+.tag-template .project-hero-content {
+    padding: 6.2rem 4vw 7.2rem;
+    min-height: 0;
+    max-height: 300px;
+    margin-bottom: 0.8rem;
+}
+.page-template .post-full-header,
+.post-template .post-full-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: clamp(7.2rem, 10vw, 12rem) 4vw clamp(4.8rem, 8vw, 7rem);
+    min-height: clamp(220px, 26vw, 320px);
+    max-width: 1040px;
+    text-align: center;
+}
+
+.page-template .page-hero-content .site-title {
+    color: #45505a;
+    letter-spacing: -0.035em;
+}
+
+.page-template .post-full.post.page.no-image {
+    padding-top: 0;
+}
+
+.page-template .post-full-header .post-full-meta,
+.post-template .post-full-header .post-full-meta {
+    margin-bottom: 1.6rem;
+    color: #7d8891;
+}
+
+.page-template .post-full-title,
+.post-template .post-full-title {
+    margin: 0;
+    padding: 0;
+    font-size: clamp(3.8rem, 5vw, 5.2rem);
+    line-height: 1.12;
+    font-weight: 700;
+    letter-spacing: -0.035em;
+    color: #45505a;
+}
+
+.page-template .post-full-header .site-description,
+.post-template .post-full-header .site-description {
+    margin: 1.4rem 0 0;
+    padding: 0;
+    font-size: clamp(1.9rem, 2.1vw, 2.4rem);
+    line-height: 1.45;
+    font-weight: 300;
+    color: #97a0a8;
+}
+
+.post-template .post-full-header {
+    padding: 4.8rem 3vw 6.4rem;
+    min-height: 0;
+}
+
 .post-template .post-full-title {
     font-size: 4.1rem;
     line-height: 1.16;
+    letter-spacing: -0.02em;
+    color: #45505a;
+}
+
+.post-template .post-full-header .site-description {
+    margin-top: 1rem;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    color: #7d8891;
 }
 .site-main .inner {
     max-width: 860px;
+}
+
+.page-template .site-header,
+.post-template .site-header,
+.author-template .site-header,
+.tag-template .site-header {
+    padding-top: 0;
+    padding-bottom: 0;
+    background-image: url(/assets/built/images/sea.jpg);
+    background-position: center 42%;
+}
+
+.page-template .site-header .inner,
+.post-template .site-header .inner,
+.author-template .site-header .inner,
+.tag-template .site-header .inner {
+    display: flex;
+    align-items: flex-end;
+    min-height: 170px;
+}
+
+.page-template .site-header .site-nav,
+.post-template .site-header .site-nav,
+.author-template .site-header .site-nav,
+.tag-template .site-header .site-nav {
+    width: 100%;
+    padding-bottom: 1.6rem;
+}
+
+.page-template .site-header .site-nav-left,
+.post-template .site-header .site-nav-left,
+.author-template .site-header .site-nav-left,
+.tag-template .site-header .site-nav-left {
+    align-items: flex-end;
+}
+
+.page-template .site-header:before,
+.post-template .site-header:before,
+.author-template .site-header:before,
+.tag-template .site-header:before {
+    background: rgba(0, 0, 0, 0.32);
+}
+
+.page-template .site-header:after,
+.post-template .site-header:after,
+.author-template .site-header:after,
+.tag-template .site-header:after {
+    height: 120px;
+    background: linear-gradient(rgba(0, 0, 0, 0.18), transparent);
 }
 .post-full-content {
     font-size: 1.6rem;
@@ -39,9 +158,10 @@ body {
 }
 .post-full-content h3,
 .post-full-content h4 {
-    font-size: 2.2rem;
+    font-size: 2.0rem;
     line-height: 1.35;
     margin-bottom: 1.2rem;
+    color: #45505a;
 }
 .home-template .post-feed .post-card:nth-child(6n+1):not(.no-image) h2 {
     font-size: 2.2rem;
@@ -51,11 +171,38 @@ body {
     line-height: 1.6;
 }
 @media (max-width: 800px) {
+    .page-template .post-full-header,
+    .post-template .post-full-header {
+        padding: 5.6rem 1.8rem 3.6rem;
+        min-height: 180px;
+    }
+
+    .page-template .post-full-title,
     .post-template .post-full-title {
         font-size: 3.2rem;
     }
+
+    .post-template .post-full-header {
+        padding: 3.6rem 1.8rem 4.8rem;
+        min-height: 0;
+    }
+
     .post-full-content {
         font-size: 1.5rem;
+    }
+
+    .page-template .site-header .inner,
+    .post-template .site-header .inner,
+    .author-template .site-header .inner,
+    .tag-template .site-header .inner {
+        min-height: 130px;
+    }
+
+    .page-template .site-header .site-nav,
+    .post-template .site-header .site-nav,
+    .author-template .site-header .site-nav,
+    .tag-template .site-header .site-nav {
+        padding-bottom: 1.2rem;
     }
 }
 
@@ -263,6 +410,7 @@ textarea,
     margin: 0 0 1rem;
     font-size: 2.8rem;
     line-height: 1.25;
+    color: #45505a;
 }
 
 .page-template .post-full-content .archive-plain-list ul {
@@ -273,6 +421,11 @@ textarea,
     margin: 0 0 0.8rem;
     font-size: 1.7rem;
     line-height: 1.55;
+}
+
+.page-template .post-full-content .archive-plain-list li a,
+.page-template .post-full-content .archive-year-list li a {
+    color: #45505a;
 }
 
 .page-template .post-full-content .archive-plain-list li:last-child {
@@ -291,6 +444,7 @@ textarea,
     margin: 0 0 1.2rem;
     font-size: 2.8rem;
     line-height: 1.25;
+    color: #45505a;
 }
 
 .archive-year-list {
