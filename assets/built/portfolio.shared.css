@@ -268,6 +268,16 @@ body {
         font-size: 3.2rem;
     }
 
+    .post-template .post-full-title {
+        font-size: 2.8rem;
+        line-height: 1.18;
+    }
+
+    .post-template .post-full-header .site-description {
+        font-size: 1.5rem;
+        line-height: 1.45;
+    }
+
     .post-template .post-full-header {
         padding: 3.6rem 1.8rem 4.8rem;
         min-height: 0;

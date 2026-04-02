@@ -240,14 +240,30 @@
 }
 
 @media (max-width: 700px) {
-    .about-intro-card {
+    .about-page .about-intro-card {
         grid-template-columns: 1fr;
-        gap: 1.4rem;
+        gap: 1.1rem;
+        align-items: start;
+        justify-items: start;
+        padding: 1.2rem 1.2rem 1.4rem;
     }
 
-    .about-profile-photo {
-        width: 150px;
-        height: 190px;
+    .about-page .about-profile-photo {
+        width: 118px;
+        max-width: 118px;
+        height: auto;
+        max-height: none;
+        object-fit: initial;
+        object-position: initial;
+        display: block;
+        margin: 0;
+        background: transparent;
+        justify-self: start;
+        align-self: start;
+    }
+
+    .about-page .about-intro-body {
+        width: 100%;
     }
 
     .about-section h2 {
@@ -299,5 +315,16 @@
         width: 180px !important;
         max-width: 180px !important;
         height: 7px;
+    }
+}
+
+@media (max-width: 800px) {
+    .about-page .post-full-header {
+        padding: 4rem 1.8rem 1.8rem;
+        min-height: 0;
+    }
+
+    .about-page .about-shell {
+        padding-top: 0.4rem;
     }
 }

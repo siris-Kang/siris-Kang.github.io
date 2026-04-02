@@ -9,6 +9,7 @@ html {
 .home-template .site-main.outer {
     padding-left: 6.5vw;
     padding-right: 6.5vw;
+    padding-bottom: 8rem;
 }
 
 .home-template .site-main .inner {
@@ -494,6 +495,7 @@ html {
     .home-template .site-main.outer {
         padding-left: 4.8vw;
         padding-right: 4.8vw;
+        padding-bottom: 6.4rem;
     }
 
     .home-template .site-main .inner {
@@ -604,7 +606,14 @@ html {
         gap: 1.8rem;
         padding: 2rem;
         align-items: flex-start;
+        height: auto;
     }
+
+    .profile-summary-body {
+        flex: 0 1 auto;
+        width: 100%;
+    }
+
     .profile-passport {
         width: 180px;
         height: 220px;
