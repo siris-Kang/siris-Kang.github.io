@@ -1,7 +1,11 @@
+.about-page .site-main .inner {
+    max-width: 940px;
+}
+
 .about-shell {
-    max-width: 860px;
+    max-width: 920px;
     margin: 0 auto;
-    padding: 1.2rem 2.4rem 6.4rem;
+    padding: 1.2rem 2rem 6.4rem;
 }
 
 .about-intro-card {
@@ -28,6 +32,7 @@
     margin: 0 0 0.8rem;
     font-size: 1.45rem;
     font-weight: 700;
+    color: var(--siris-color-title);
 }
 
 .about-intro-body .about-intro-title {
@@ -111,6 +116,44 @@
     display: grid;
     gap: 0.9rem;
     max-width: 680px;
+}
+
+.skill-logo-list {
+    margin-top: 0.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    align-items: stretch;
+}
+
+.skill-logo-card {
+    width: 116px;
+    min-height: 104px;
+    padding: 1.1rem 0.9rem;
+    border: 1px solid var(--siris-color-border);
+    border-radius: 14px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    text-align: center;
+}
+
+.skill-logo-card img {
+    display: block;
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    margin: 0;
+}
+
+.skill-logo-name {
+    font-size: 1.22rem;
+    line-height: 1.35;
+    color: var(--siris-color-text);
+    word-break: keep-all;
 }
 
 .skill-category {
@@ -211,7 +254,7 @@
 
 @media (max-width: 900px) {
     .about-shell {
-        padding: 4.8rem 1.6rem;
+        padding: 4.8rem 1.4rem;
     }
 
     .about-intro-card {
@@ -236,6 +279,16 @@
     .about-skills-section .skill-gauge-track {
         width: 240px !important;
         max-width: 240px !important;
+    }
+
+    .skill-logo-list {
+        gap: 1rem;
+    }
+
+    .skill-logo-card {
+        width: 108px;
+        min-height: 98px;
+        padding: 1rem 0.8rem;
     }
 }
 
@@ -292,6 +345,22 @@
 
     .about-skills-section h2 {
         font-size: 2rem;
+    }
+
+    .skill-logo-card {
+        width: 96px;
+        min-height: 92px;
+        padding: 0.9rem 0.7rem;
+        gap: 0.65rem;
+    }
+
+    .skill-logo-card img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .skill-logo-name {
+        font-size: 1.1rem;
     }
 
     .skill-gauge-list {
