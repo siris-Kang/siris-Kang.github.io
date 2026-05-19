@@ -535,39 +535,43 @@ html {
 }
 
 .bg-vanguarddt {
-    background-image: url(/assets/built/images/project-vanguarddt-image.jpg);
+    background-image: url(/projects/vanguard-dt/assets/project-vanguarddt-image.jpg);
 }
 
 .bg-autowingcar {
-    background-image: url(/assets/built/images/project-autowingcar-image.png);
+    background-image: url(/projects/auto-wingcar/assets/project-autowingcar-image.png);
 }
 
 .bg-luxtrail {
-    background-image: url(/assets/built/images/project-luxtrail-image.png);
+    background-image: url(/projects/luxtrail/assets/project-luxtrail-image.png);
+}
+
+.bg-ppa {
+    background-image: url(/projects/ppa-analyzer/assets/project-ppa-image.png);
 }
 
 .bg-movement {
-    background-image: url(/assets/built/images/project-movementtransfer-image.png);
+    background-image: url(/projects/human-dance-movement-transfer/assets/project-movementtransfer-image.png);
 }
 
 .bg-vrblowing {
-    background-image: url(/assets/built/images/project-vrblowing-image.png);
+    background-image: url(/projects/vr-blowing/assets/project-vrblowing-image.png);
 }
 
 .bg-dusk {
-    background-image: url(/assets/built/images/project-dusk-image.png);
+    background-image: url(/projects/unreal-fps-game/assets/project-dusk-image.png);
 }
 
 .bg-mausoleum {
-    background-image: url(/assets/built/images/project-mausoleum-image.png);
+    background-image: url(/projects/mausoleum/assets/project-mausoleum-image.png);
 }
 
 .bg-breakeachstage {
-    background-image: url(/assets/built/images/project-break-each-stage-image.png);
+    background-image: url(/projects/break-each-stage/assets/project-break-each-stage-image.png);
 }
 
 .bg-pouring {
-    background-image: url(/assets/built/images/project-pouring-image.png);
+    background-image: url(/projects/auto-pouring-machine/assets/project-pouring-image.png);
 }
 
 .bg-summit {
