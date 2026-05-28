@@ -570,6 +570,10 @@ html {
     background-image: url(/projects/break-each-stage/assets/project-break-each-stage-image.png);
 }
 
+.bg-sph {
+    background-image: url(/projects/sph-fluid-simulation/assets/fluid-main-image.png);
+}
+
 .bg-pouring {
     background-image: url(/projects/auto-pouring-machine/assets/project-pouring-image.png);
 }
