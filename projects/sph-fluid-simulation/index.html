@@ -45,12 +45,24 @@
                         <p class="site-description">CUDA 기반 SPH 유체 시뮬레이션 구현 프로젝트</p>
                     </header>
                     <section class="post-full-content">
+                        <h2>0. 프로젝트 소개</h2>
+                        <p>
+                            <a href="https://github.com/siris-Kang/MySPHProject" target="_blank" rel="noopener">
+                                <img src="https://api.iconify.design/simple-icons:github.svg?color=111111" alt="" width="15" height="15" style="vertical-align:-2px;margin-right:6px;" />
+                                MySPHProject GitHub
+                            </a>
+                        </p>
+
                         <h2>1. 프로젝트 개요</h2>
                         <ul>
                             <li>CUDA를 이용해 입자 기반 유체의 움직임을 구현한 프로젝트입니다.</li>
                             <li>SPH(Smoothed Particle Hydrodynamics) 방식으로 밀도, 압력, 점성, 외력을 계산해 유체를 시뮬레이션하는 것이 목표였습니다.</li>
                             <li>계산 결과를 Unreal과 연동해 particle의 움직임을 시각적으로 표현했습니다.</li>
                         </ul>
+
+                        <figure class="project-overview-card project-overview-wide">
+                            <img src="/projects/sph-fluid-simulation/assets/fluid-main-image.png" alt="SPH Fluid Simulation 대표 이미지" />
+                        </figure>
 
                         <h3>주요 기능</h3>
                         <ul>
@@ -103,21 +115,19 @@
 
                         <h4>해결</h4>
                         <ul>
-                            <li>경계 처리 방식과 충돌 반응 계산 중 어느 쪽이 더 큰 영향을 주는지 먼저 분리해 보려 했습니다.</li>
-                            <li>SPH 파라미터, 경계 조건, 시간 간격 설정을 함께 조정하며 문제 범위를 좁혔습니다.</li>
-                            <li>프로젝트 기간과 GPU 환경 제약으로 완전한 해결에는 이르지 못했지만, 문제 지점을 경계 조건과 수치 안정성 이슈로 정리했습니다.</li>
+                            <li>바운더리 오브젝트를 실제 삼각형 메시가 아닌 회전 가능한 박스(OBB)로 근사해 충돌을 검사했습니다.</li>
+                            <li>파티클이 박스 내부로 들어오면 가장 가까운 면 밖으로 밀어내고, 해당 면 안쪽으로 향하는 속도 성분만 제거했습니다.</li>
                         </ul>
 
                         <h4>성과</h4>
                         <ul>
-                            <li>미해결 이슈를 막연한 오류가 아니라 경계 처리와 수치 안정성 문제로 구체화했습니다.</li>
-                            <li>추가 실험이 필요한 지점을 명확히 정리해 후속 개선 방향을 도출했습니다.</li>
+                            <li>파티클이 경계를 통과하던 문제를 기하 연산 기반 충돌 처리로 완화했습니다.</li>
+                            <li>Unreal의 좌표계와 시뮬레이션 좌표계를 변환해 CUDA 충돌 계산에 반영했습니다.</li>
                         </ul>
 
                         <h4>의미</h4>
                         <ul>
-                            <li>물리 시뮬레이션에서는 기능 구현만큼 경계 조건과 수치 안정성 설계가 중요하다는 점을 체감했습니다.</li>
-                            <li>미해결 이슈가 남았지만, CUDA 기반 병렬 연산과 시뮬레이션 안정성 문제를 직접 고민해본 경험을 얻었습니다.</li>
+                            <li>물리 시뮬레이션에서는 복잡한 메시 충돌보다, 문제에 맞는 단순화된 충돌 모델을 설계하는 것이 중요하다는 점을 배웠습니다.</li>
                         </ul>
 
                         <h2>6. 성과 및 결과</h2>
