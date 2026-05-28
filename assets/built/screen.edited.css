@@ -96,6 +96,19 @@
     background: transparent;
 }
 
+.ppa-architecture-card {
+    width: 100%;
+    max-width: 100%;
+    margin: 2.0rem 0 3.2rem;
+    transform: none;
+}
+
+.ppa-architecture-card img {
+    width: 100%;
+    max-width: none;
+    max-height: none;
+}
+
 .project-overview-card figcaption {
     margin-top: 0.9rem;
     color: var(--siris-color-meta);
