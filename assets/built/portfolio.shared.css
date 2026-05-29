@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+Math&family=Noto+Sans+Symbols:wght@100..900&display=swap");
+
 :root {
-    --siris-ui-font: "Noto Sans KR", sans-serif;
+    --siris-ui-font: "Noto Sans KR", "Nanum Gothic", "Noto Sans Math", "Noto Sans Symbols", sans-serif;
     --siris-color-bg: #ffffff;
     --siris-color-text: #222;
     --siris-color-text-soft: #4b5762;
@@ -21,6 +23,7 @@
 
 html,
 body,
+body *,
 input,
 button,
 select,
