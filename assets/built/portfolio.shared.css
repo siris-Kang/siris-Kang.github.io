@@ -107,6 +107,43 @@ body {
     align-items: flex-end;
 }
 
+.site-header .site-nav {
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+}
+
+.site-header .site-nav-left {
+    flex: 1 1 auto;
+    justify-content: center;
+    margin-right: 0;
+    padding-bottom: 0;
+    overflow: visible;
+}
+
+.site-header .nav {
+    justify-content: center;
+    margin: 0;
+}
+
+.site-header .nav li a {
+    text-align: center;
+}
+
+.site-header .site-nav-logo {
+    position: static;
+    z-index: 1;
+    margin-right: 2.4rem;
+    transform: none;
+}
+
+.site-header .site-nav-right {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 .page-template .site-header:before,
 .post-template .site-header:before,
 .author-template .site-header:before,
@@ -189,6 +226,53 @@ body {
     margin-top: 1rem;
     font-size: 1.8rem;
     line-height: 1.5;
+}
+
+.post-template .post-full-header .project-header-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.9rem;
+    margin: 2.2rem 0 0;
+}
+
+.post-template .post-full-header .project-header-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    min-height: 3.6rem;
+    padding: 0.68rem 1.18rem;
+    border: 1px solid rgba(15, 23, 42, 0.24);
+    border-radius: 8px;
+    color: #111827;
+    font-size: 1.35rem;
+    line-height: 1.2;
+    font-weight: 700;
+    text-decoration: none;
+    background: #fff;
+    transition: background 0.16s ease, border-color 0.16s ease, transform 0.16s ease;
+}
+
+.post-template .post-full-header .project-header-action img {
+    width: 1.25em;
+    height: 1.25em;
+    flex: 0 0 auto;
+    margin: 0;
+    max-width: none;
+}
+
+.post-template .post-full-header .project-header-action span {
+    white-space: nowrap;
+}
+
+.post-template .post-full-header .project-header-action:hover,
+.post-template .post-full-header .project-header-action:focus {
+    color: #111827;
+    text-decoration: none;
+    border-color: rgba(15, 23, 42, 0.5);
+    background: #f8fafc;
+    transform: translateY(-1px);
 }
 
 .post-full-content {
@@ -278,6 +362,17 @@ body {
         line-height: 1.45;
     }
 
+    .post-template .post-full-header .project-header-actions {
+        gap: 0.6rem;
+        margin-top: 1.6rem;
+    }
+
+    .post-template .post-full-header .project-header-action {
+        min-height: 3.1rem;
+        padding: 0.52rem 0.88rem;
+        font-size: 1.12rem;
+    }
+
     .post-template .post-full-header {
         padding: 3.6rem 1.8rem 4.8rem;
         min-height: 0;
@@ -299,6 +394,15 @@ body {
     .author-template .site-header .site-nav,
     .tag-template .site-header .site-nav {
         padding-bottom: 1.2rem;
+    }
+
+    .site-header .site-nav-left {
+        padding-left: 0;
+        overflow-x: auto;
+    }
+
+    .site-header .site-nav-logo {
+        margin-right: 1.4rem;
     }
 }
 

@@ -37,16 +37,16 @@
         <main id="site-main" class="site-main outer" role="main">
             <div class="inner">
                 <div class="site-header-content project-hero-content">
-                    <h1 class="site-title">Project</h1>
+                    <h1 class="site-title">PROJECTS</h1>
                 </div>
 
                 <div class="project-category-nav" id="project-category-nav" aria-label="Project categories">
-                    <a class="project-category-button" href="#category-embedded">Embedded</a>
-                    <a class="project-category-button" href="#category-web">Web</a>
-                    <a class="project-category-button" href="#category-ai">AI</a>
-                    <a class="project-category-button" href="#category-vr">VR</a>
-                    <a class="project-category-button" href="#category-game">Game</a>
-                    <a class="project-category-button" href="#category-others">Others</a>
+                    <a class="project-category-button" href="#category-embedded"><span class="project-category-icon project-category-icon-embedded" aria-hidden="true"></span><span>Embedded</span></a>
+                    <a class="project-category-button" href="#category-web"><span class="project-category-icon project-category-icon-web" aria-hidden="true"></span><span>Web</span></a>
+                    <a class="project-category-button" href="#category-ai"><span class="project-category-icon project-category-icon-ai" aria-hidden="true"></span><span>AI</span></a>
+                    <a class="project-category-button" href="#category-vr"><span class="project-category-icon project-category-icon-vr" aria-hidden="true"></span><span>VR</span></a>
+                    <a class="project-category-button" href="#category-game"><span class="project-category-icon project-category-icon-game" aria-hidden="true"></span><span>Game</span></a>
+                    <a class="project-category-button" href="#category-others"><span class="project-category-icon project-category-icon-others" aria-hidden="true"></span><span>Others</span></a>
                 </div>
 
                 <section class="project-category-section" id="category-embedded">
@@ -326,11 +326,77 @@
             var backButton = document.querySelector('.back-to-categories-button');
             var categoriesNav = document.getElementById('project-category-nav');
             var showButtonAfter = 240;
-            var scrollOffset = 180;
+            var ticking = false;
 
-            if (!backButton) return;
+            if (!categoriesNav) return;
+
+            var navPlaceholder = document.createElement('div');
+            navPlaceholder.className = 'project-category-nav-placeholder';
+            categoriesNav.parentNode.insertBefore(navPlaceholder, categoriesNav);
+
+            var categoryLinks = Array.prototype.slice.call(categoriesNav.querySelectorAll('.project-category-button'));
+            var categorySections = categoryLinks
+                .map(function (link) {
+                    return document.querySelector(link.getAttribute('href'));
+                })
+                .filter(Boolean);
+
+            function setActiveCategory(sectionId) {
+                categoryLinks.forEach(function (link) {
+                    var isActive = link.getAttribute('href') === '#' + sectionId;
+                    link.classList.toggle('is-active', isActive);
+
+                    if (isActive) {
+                        link.setAttribute('aria-current', 'true');
+                    } else {
+                        link.removeAttribute('aria-current');
+                    }
+                });
+            }
+
+            function getCategoryOffset() {
+                return categoriesNav.getBoundingClientRect().height + 24;
+            }
+
+            function syncCategoryNavPosition() {
+                var placeholderTop = navPlaceholder.getBoundingClientRect().top + window.scrollY;
+                var shouldStick = window.scrollY >= placeholderTop;
+
+                if (shouldStick) {
+                    var parentRect = categoriesNav.parentElement.getBoundingClientRect();
+
+                    navPlaceholder.style.height = categoriesNav.offsetHeight + 'px';
+                    categoriesNav.classList.add('is-stuck');
+                    categoriesNav.style.top = '0px';
+                    categoriesNav.style.left = parentRect.left + 'px';
+                    categoriesNav.style.width = parentRect.width + 'px';
+                } else {
+                    navPlaceholder.style.height = '0px';
+                    categoriesNav.classList.remove('is-stuck');
+                    categoriesNav.style.top = '';
+                    categoriesNav.style.left = '';
+                    categoriesNav.style.width = '';
+                }
+            }
+
+            function updateActiveCategory() {
+                if (!categorySections.length) return;
+
+                var offset = getCategoryOffset();
+                var currentSection = categorySections[0];
+
+                categorySections.forEach(function (section) {
+                    if (section.getBoundingClientRect().top - offset <= 0) {
+                        currentSection = section;
+                    }
+                });
+
+                setActiveCategory(currentSection.id);
+            }
 
             function toggleBackButton() {
+                if (!backButton) return;
+
                 if (window.scrollY > showButtonAfter) {
                     backButton.classList.add('is-visible');
                 } else {
@@ -338,20 +404,53 @@
                 }
             }
 
-            backButton.addEventListener('click', function (event) {
-                if (!categoriesNav) return;
+            function handleScroll() {
+                if (ticking) return;
 
-                event.preventDefault();
+                window.requestAnimationFrame(function () {
+                    syncCategoryNavPosition();
+                    toggleBackButton();
+                    updateActiveCategory();
+                    ticking = false;
+                });
 
-                var targetTop = categoriesNav.getBoundingClientRect().top + window.scrollY - scrollOffset;
-                window.scrollTo({
-                    top: Math.max(targetTop, 0),
-                    behavior: 'smooth'
+                ticking = true;
+            }
+
+            categoryLinks.forEach(function (link) {
+                link.addEventListener('click', function (event) {
+                    var target = document.querySelector(link.getAttribute('href'));
+
+                    if (!target) return;
+
+                    event.preventDefault();
+                    setActiveCategory(target.id);
+                    window.scrollTo({
+                        top: Math.max(target.getBoundingClientRect().top + window.scrollY - getCategoryOffset(), 0),
+                        behavior: 'smooth'
+                    });
                 });
             });
 
-            window.addEventListener('scroll', toggleBackButton, { passive: true });
+            if (backButton) {
+                backButton.addEventListener('click', function (event) {
+                    event.preventDefault();
+
+                    window.scrollTo({
+                        top: Math.max(navPlaceholder.getBoundingClientRect().top + window.scrollY - 18, 0),
+                        behavior: 'smooth'
+                    });
+                });
+            }
+
+            window.addEventListener('scroll', handleScroll, { passive: true });
+            window.addEventListener('resize', function () {
+                syncCategoryNavPosition();
+                updateActiveCategory();
+            });
+            syncCategoryNavPosition();
             toggleBackButton();
+            updateActiveCategory();
         }());
     </script>
 </body>
