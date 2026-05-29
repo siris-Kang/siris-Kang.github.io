@@ -14,6 +14,10 @@
     --siris-header-image: url(/assets/built/images/sea.jpg);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .noto-sans-kr-siris {
     font-family: var(--siris-ui-font);
     font-optical-sizing: auto;

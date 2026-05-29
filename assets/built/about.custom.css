@@ -1,3 +1,4 @@
+/* About page frame */
 .about-page .site-main .inner {
     max-width: 940px;
 }
@@ -8,6 +9,7 @@
     padding: 1.2rem 2rem 6.4rem;
 }
 
+/* About intro card */
 .about-intro-card {
     margin-bottom: 4.8rem;
     padding: 2.4rem 0;
@@ -50,6 +52,7 @@
     margin-bottom: 0;
 }
 
+/* About content sections */
 .about-section {
     margin-bottom: 9.6rem;
     padding: 0.4rem 0;
@@ -111,13 +114,7 @@
     margin: 0.5rem 0;
 }
 
-.skill-gauge-list {
-    margin-top: 0.6rem;
-    display: grid;
-    gap: 0.9rem;
-    max-width: 680px;
-}
-
+/* About skill logo cards */
 .skill-logo-list {
     margin-top: 0.8rem;
     display: flex;
@@ -171,64 +168,6 @@
     font-weight: 700;
 }
 
-.skill-gauge-row {
-    display: grid;
-    grid-template-columns: 150px minmax(0, 380px);
-    gap: 0.9rem;
-    align-items: center;
-    padding: 0.1rem 0;
-}
-
-.skill-gauge-name {
-    font-size: 1.5rem;
-    font-weight: 500;
-}
-
-.skill-gauge-track {
-    display: block;
-    width: min(100%, 380px);
-    justify-self: start;
-    height: 8px;
-    border-radius: 999px;
-    overflow: hidden;
-    background: #e6ebef;
-}
-
-.skill-gauge-fill {
-    display: block;
-    height: 100%;
-    border-radius: 999px;
-    background: linear-gradient(90deg, #ff9f1a, #ffc74a);
-}
-
-.gauge-90 {
-    width: 90%;
-}
-
-.gauge-80 {
-    width: 80%;
-}
-
-.gauge-70 {
-    width: 70%;
-}
-
-.gauge-78 {
-    width: 78%;
-}
-
-.gauge-74 {
-    width: 74%;
-}
-
-.gauge-72 {
-    width: 72%;
-}
-
-.gauge-68 {
-    width: 68%;
-}
-
 .about-skills-section {
     margin-bottom: 7.2rem;
 }
@@ -238,20 +177,7 @@
     font-size: 2.45rem;
 }
 
-.about-skills-section .skill-gauge-list {
-    max-width: 560px !important;
-}
-
-.about-skills-section .skill-gauge-row {
-    grid-template-columns: 130px 280px !important;
-    gap: 0.8rem !important;
-}
-
-.about-skills-section .skill-gauge-track {
-    width: 280px !important;
-    max-width: 280px !important;
-}
-
+/* About responsive rules */
 @media (max-width: 900px) {
     .about-shell {
         padding: 4.8rem 1.4rem;
@@ -270,15 +196,6 @@
 
     .about-skills-section h2 {
         font-size: 2.2rem;
-    }
-
-    .about-skills-section .skill-gauge-row {
-        grid-template-columns: 120px 240px !important;
-    }
-
-    .about-skills-section .skill-gauge-track {
-        width: 240px !important;
-        max-width: 240px !important;
     }
 
     .skill-logo-list {
@@ -363,27 +280,8 @@
         font-size: 1.1rem;
     }
 
-    .skill-gauge-list {
-        gap: 0.8rem;
-    }
-
     .skill-category-title {
         font-size: 1.45rem;
-    }
-
-    .about-skills-section .skill-gauge-row {
-        grid-template-columns: 100px 180px !important;
-        gap: 0.75rem;
-    }
-
-    .skill-gauge-name {
-        font-size: 1.45rem;
-    }
-
-    .about-skills-section .skill-gauge-track {
-        width: 180px !important;
-        max-width: 180px !important;
-        height: 7px;
     }
 }
 
