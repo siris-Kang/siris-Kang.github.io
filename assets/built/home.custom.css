@@ -280,6 +280,15 @@ html {
     text-align: center;
 }
 
+.home-intro-panel > .projects-header .projects-title {
+    -webkit-text-stroke: 0.1px #ffffff;
+    text-shadow:
+        0 0.3px 0 #ffffff,
+        0.3px 0 0 #ffffff,
+        0 -0.3px 0 #ffffff,
+        -0.3px 0 0 #ffffff;
+}
+
 .projects-header .site-description {
     margin: 0;
     padding: 0;
