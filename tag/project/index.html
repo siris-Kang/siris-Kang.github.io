@@ -370,7 +370,7 @@
             </div>
         </main>
 
-        <a class="back-to-categories-button" href="#project-category-nav" aria-label="프로젝트 목차로 이동">
+        <a class="back-to-categories-button" href="#" aria-label="맨 위로 이동">
             <span aria-hidden="true">↑</span>
         </a>
 
@@ -499,7 +499,7 @@
                     event.preventDefault();
 
                     window.scrollTo({
-                        top: Math.max(navPlaceholder.getBoundingClientRect().top + window.scrollY - 18, 0),
+                        top: 0,
                         behavior: 'smooth'
                     });
                 });

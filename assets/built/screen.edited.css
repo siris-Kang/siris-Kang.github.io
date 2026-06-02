@@ -5,44 +5,100 @@
 /* Shared typography, colors, and header roles live in portfolio.shared.css */
 
 /* Project detail readability */
+.page-template:not(.project-overview-page):not(.about-page) .page-hero-content .site-title {
+    display: inline-block;
+    min-width: 0;
+    width: auto;
+    max-width: max-content;
+    color: #2E3C57;
+    font-size: clamp(2.0rem, 3.2vw, 2.8rem);
+    font-weight: 900;
+    line-height: 1.08;
+    background: linear-gradient(transparent 58%, #eaecf2 0);
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
 .post-template .post-full-content {
-    font-size: 1.65rem;
-    line-height: 1.85;
+    font-size: 1.42rem;
+    line-height: 1.68;
 }
 
 .post-template .post-full-content p,
 .post-template .post-full-content ul,
 .post-template .post-full-content ol {
-    margin: 0 0 2.4rem;
+    margin: 0 0 1.9rem;
+}
+
+.post-template .post-full-content ul,
+.post-template .post-full-content ol {
+    padding-left: 0;
+    padding-right: 0;
+    list-style: none;
 }
 
 .post-template .post-full-content li {
-    margin: 0.8rem 0;
-    line-height: 1.5;
+    margin: 0.44rem 0;
+    padding-left: 0;
+    line-height: 1.58;
 }
 
 .post-template .post-full-content h2 {
-    margin: 8.0rem 0 2.5rem;
-    font-size: 2.5rem;
-    line-height: 1.2;
+    margin: 6.8rem 0 2.0rem;
+    font-size: 2.05rem;
+    line-height: 1.24;
     font-weight: 800;
-    letter-spacing: -0.01em;
+    letter-spacing: 0;
     color: var(--siris-color-title);
 }
 
 .post-template .post-full-content h3 {
-    margin: 3.4rem 0 1.4rem;
-    font-size: 2.0rem;
-    line-height: 1.35;
+    display: table;
+    min-width: 0;
+    width: auto;
+    margin: 3.2rem 0 1.05rem;
+    font-size: 1.48rem;
+    line-height: 1.45;
     font-weight: 700;
+    background: linear-gradient(transparent 58%, rgba(217, 224, 232, 0.72) 0);
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+.post-template .post-full-content h3 + p,
+.post-template .post-full-content h3 + ul,
+.post-template .post-full-content h3 + ol,
+.post-template .post-full-content h3 + figure {
+    margin-top: 1.05rem;
 }
 
 .post-template .post-full-content h4 {
-    margin: 2.2rem 0 1rem;
-    font-size: 1.8rem;
-    line-height: 1.5;
-    font-weight: 600;
+    display: table;
+    min-width: 0;
+    width: auto;
+    margin: 2.35rem 0 0.65rem;
+    padding: 0.18rem 0.5rem;
+    border-left: 3px solid #cfd7e3;
+    background: #f6f8fb;
+    color: #56657a;
+    font-size: 1.06rem;
+    line-height: 1.35;
+    font-weight: 800;
+}
+
+.post-template .post-full-content h4 + p,
+.post-template .post-full-content h4 + ul,
+.post-template .post-full-content h4 + ol {
+    margin-top: 0.55rem;
+}
+
+.post-template .post-full-content b,
+.post-template .post-full-content strong {
     color: var(--siris-color-title);
+    font-weight: 700;
+    background: linear-gradient(transparent 58%, rgba(217, 224, 232, 0.72) 0);
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
 }
 
 .post-template .post-full-content > h2:first-child {
@@ -62,8 +118,8 @@
 .project-overview-gallery {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.0rem;
-    margin: 1.8rem 0 3.2rem;
+    gap: 1.35rem;
+    margin: 2.2rem 0 4.0rem;
     align-items: start;
 }
 
@@ -72,8 +128,8 @@
 }
 
 .project-overview-wide {
-    text-align: center;
-    margin: 1.6rem auto 2.8rem;
+    text-align: left;
+    margin: 2.2rem 0 3.8rem;
 }
 
 .project-overview-card img {
@@ -91,7 +147,7 @@
     max-width: min(100%, 64rem);
     height: auto;
     max-height: 28rem;
-    margin: 0 auto;
+    margin: 0;
     object-fit: contain;
     background: transparent;
 }
@@ -125,7 +181,7 @@
 }
 
 .project-role-note {
-    margin: 0 0 0.5rem;
+    margin: 0.4rem 0 1.6rem;
     color: var(--siris-color-text-soft);
     font-size: 1.5rem;
     line-height: 1.3;
@@ -133,27 +189,56 @@
 
 .post-template .post-full-content .project-role-note p {
     margin: 0.4rem 0;
+    display: table;
+    min-width: 0;
+    width: auto;
+    color: var(--siris-color-title);
+    font-weight: 700;
+    background: linear-gradient(transparent 58%, #eaecf2 0);
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
 }
 
 .post-template .post-full-content .project-role-note ul {
-    margin: 0.35rem 0 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0.55rem 0.75rem;
+    margin: 0.75rem 0 0;
     padding-left: 0;
     list-style: none;
 }
 
 .post-template .post-full-content .project-role-note li {
-    position: relative;
-    margin: 0.18rem 0;
-    padding-left: 1.1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.42rem;
+    margin: 0;
+    padding-left: 0;
     line-height: 1.35;
 }
 
 .post-template .post-full-content .project-role-note li::before {
-    content: "-";
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: var(--siris-color-muted);
+    content: none;
+}
+
+.role-chip {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.55rem;
+    padding: 0.34rem 0.9rem;
+    border-radius: 12px;
+    background: #f2f4f9;
+    color: #46566c;
+    font-size: 1.42rem;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.role-count {
+    color: var(--siris-color-text-soft);
+    font-size: 1.42rem;
+    line-height: 1.2;
 }
 
 .post-template .post-full-content h2 + .project-role-note {
@@ -165,27 +250,68 @@
 }
 
 .archive-plain-list {
-    margin-top: 1.2rem;
+    margin: 0 auto;
+    max-width: 760px;
+    padding: 0.8rem 0 5.8rem;
 }
 
 .page-template .post-full-content .archive-plain-list h2 {
-    margin: 0 0 1rem;
-    font-size: 2.8rem;
-    line-height: 1.25;
+    display: inline-block;
+    min-width: 0;
+    width: auto;
+    max-width: max-content;
+    margin: 0 0 1.25rem;
+    color: var(--siris-color-title);
+    font-size: 1.82rem;
+    line-height: 1.22;
+    font-weight: 850;
+    background: linear-gradient(transparent 58%, #eaecf2 0);
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
 }
 
 .page-template .post-full-content .archive-plain-list ul {
-    margin: 0 0 2.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.62rem;
+    margin: 0 0 3.4rem;
+    padding-left: 0;
+    list-style: none;
 }
 
 .page-template .post-full-content .archive-plain-list li {
-    margin: 0 0 0.8rem;
-    font-size: 1.7rem;
-    line-height: 1.55;
+    margin: 0;
+    padding-left: 0;
+    font-size: 1.24rem;
+    line-height: 1.35;
 }
 
 .page-template .post-full-content .archive-plain-list li:last-child {
     margin-bottom: 0;
+}
+
+.page-template .post-full-content .archive-plain-list li a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.55rem;
+    padding: 0.38rem 0.82rem;
+    border: 1px solid #e5e8ed;
+    border-radius: 8px;
+    background: #f2f4f9;
+    color: #2E3C57;
+    font-weight: 700;
+    line-height: 1.25;
+    text-decoration: none;
+    box-shadow: none;
+}
+
+.page-template .post-full-content .archive-plain-list li a:hover,
+.page-template .post-full-content .archive-plain-list li a:focus {
+    color: #2E3C57;
+    text-decoration: none;
+    border-color: #c1cbe2;
+    background: #eaecf2;
+    box-shadow: none;
 }
 
 .archive-year-group {
@@ -222,6 +348,20 @@
 .project-overview-stack {
     display: grid;
     gap: 2rem;
+}
+
+.project-overview-page .page-hero-content .site-title {
+    display: inline-block;
+    min-width: 0;
+    width: auto;
+    max-width: max-content;
+    color: #2E3C57;
+    font-size: clamp(2.0rem, 3.2vw, 2.8rem);
+    font-weight: 900;
+    line-height: 1.08;
+    background: linear-gradient(transparent 58%, #eaecf2 0);
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
 }
 
 .project-overview-page .site-main .inner,
@@ -269,27 +409,27 @@
 
 @media (max-width: 800px) {
     .post-template .post-full-content {
-        font-size: 1.55rem;
-        line-height: 1.8;
+        font-size: 1.34rem;
+        line-height: 1.66;
     }
 
     .post-template .post-full-content h2 {
         margin-top: 5.0rem;
-        font-size: 2.5rem;
+        font-size: 1.88rem;
     }
 
     .post-template .post-full-content h3 {
-        margin-top: 2.0rem;
-        font-size: 2.2rem;
+        margin-top: 2.6rem;
+        font-size: 1.36rem;
     }
 
     .post-template .post-full-content h4 {
-        margin-top: 1.8rem;
-        font-size: 1.75rem;
+        margin-top: 2.0rem;
+        font-size: 1.0rem;
     }
 
     .post-template .post-full-content li {
-        margin: 0.55rem 0;
+        margin: 0.4rem 0;
     }
 
     .project-overview-gallery {
@@ -309,11 +449,11 @@
     }
 
     .page-template .post-full-content .archive-plain-list h2 {
-        font-size: 2.4rem;
+        font-size: 1.62rem;
     }
 
     .page-template .post-full-content .archive-plain-list li {
-        font-size: 1.55rem;
+        font-size: 1.12rem;
     }
 
     .project-overview-stack {
