@@ -1,1 +1,17 @@
-projects/sph-fluid-simulation/assets/fluid-gif.gif
+# OS/editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Jekyll/build output
+_site/
+.jekyll-cache/
+.sass-cache/
+.jekyll-metadata
+
+# Dependencies and logs
+node_modules/
+*.log
