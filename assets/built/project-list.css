@@ -574,9 +574,16 @@
     }
 
     .project-category-nav {
+        width: 100%;
+        max-width: 100%;
         padding-top: 0.65rem;
+        padding-left: max(1rem, env(safe-area-inset-left));
+        padding-right: max(1rem, env(safe-area-inset-right));
         overflow-x: auto;
         overflow-y: hidden;
+        scroll-padding-left: max(1rem, env(safe-area-inset-left));
+        scroll-padding-right: max(1rem, env(safe-area-inset-right));
+        -webkit-overflow-scrolling: touch;
     }
 
     .project-category-nav::before {
@@ -590,7 +597,7 @@
 
     .project-category-button {
         gap: 0.48rem;
-        flex-basis: 7.4rem;
+        flex: 0 0 auto;
         min-height: 4.9rem;
         padding: 1rem 0.85rem 1.28rem;
         font-size: 1.2rem;
@@ -711,8 +718,8 @@
 
 @media (max-width: 560px) {
     .project-category-nav {
-        margin-left: -4.8vw !important;
-        margin-right: -4.8vw !important;
-        width: calc(100% + 9.6vw);
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100%;
     }
 }

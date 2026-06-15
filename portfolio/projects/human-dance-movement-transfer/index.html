@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Human Dance Movement Transfer via First Order Motion Mode - SIRIS</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/portfolio/assets/built/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/portfolio/assets/built/screen.edited.css" />
+    <link rel="stylesheet" type="text/css" href="/portfolio/assets/built/portfolio.shared.css" />
+    <link rel="stylesheet" type="text/css" href="/portfolio/assets/built/syntax.css" />
+    <meta name="description" content="Human Dance Movement Transfer project summary by SIRIS" />
+    <link rel="canonical" href="https://siris-kang.github.io/portfolio/projects/human-dance-movement-transfer/" />
+</head>
+<body class="post-template noto-sans-kr-siris">
+    <div class="site-wrapper">
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav">
+            <div class="site-nav-left">
+                <a class="site-nav-logo" href="https://siris-kang.github.io/portfolio/">SIRIS</a>
+                <ul class="nav" role="menu">
+    <li class="nav-home" role="menuitem"><a href="/portfolio/">Home</a></li>
+    <li class="nav-about" role="menuitem"><a href="/portfolio/about/">About</a></li>
+    <li class="nav-overview" role="menuitem"><a href="/portfolio/project-overview/">Overview</a></li>
+    <li class="nav-project" role="menuitem"><a href="/portfolio/tag/project/">Project</a></li>
+    <li class="nav-archive" role="menuitem"><a href="/portfolio/archive/">Archive</a></li>
+    <li class="nav-archive" role="menuitem"><a href="/portfolio/author-archive/">Categories</a></li>
+</ul>
+            </div>
+        </nav>
+    </div>
+</header>
+
+        <main id="site-main" class="site-main outer" role="main">
+            <div class="inner">
+                <article class="post-full post page no-image">
+                    <header class="post-full-header">
+                        <section class="post-full-meta">
+                            <time class="post-full-meta-date" datetime="2024-06">2024.06 - 2024.12</time>
+                            <span class="date-divider">/</span>
+                            <a href='/portfolio/tag/project/'>AI</a>
+                        </section>
+                        <h1 class="post-full-title">Human Dance Movement Transfer via First Order Motion Model</h1>
+                        <p class="site-description">First Order Motion Model 기반 전신 춤 동작 전이 연구</p>
+                    </header>
+                    <section class="post-full-content">
+                        <h2>1. 프로젝트 개요</h2>
+                        <ul>
+                            <li>First Order Motion Model 기반 전신 동작 전이 연구</li>
+                            <li>한 사람의 정지 이미지에 다른 사람의 동작 영상을 전달해 새로운 동작 영상을 생성하는 연구</li>
+                            <li>복잡한 자세 라벨링 없이 keypoint 기반으로 움직임을 학습하는 모델 활용</li>
+                            <li>단순 논문 재현이 아니라, 전신 동작에 더 맞도록 입력 표현, keypoint 수, 학습 환경을 조정하는 것을 목표로 진행</li>
+                        </ul>
+
+                        <figure class="project-overview-card project-overview-wide">
+                            <img src="/portfolio/projects/human-dance-movement-transfer/assets/project-movementtransfer-image.png" alt="Human Dance Movement Transfer 결과 이미지" />
+                        </figure>
+
+                        <h3>주요 기능</h3>
+                        <ul>
+                            <li>source image + driving video 기반 동작 전이</li>
+                            <li>keypoint 추출 및 motion representation 생성</li>
+                            <li>source appearance를 유지한 채 동작 반영 이미지 생성</li>
+                            <li>프레임 단위 결과를 영상으로 생성</li>
+                            <li>전처리 및 학습 환경 조정을 통한 전신 동작 표현 개선</li>
+                        </ul>
+
+                        <h2>2. 담당 역할</h2>
+                        <ul>
+                            <li>논문 구조 및 코드 분석</li>
+                            <li>데이터셋 전처리</li>
+                            <li>bounding box 기준 조정</li>
+                            <li>keypoint 수 10개 → 14개 수정</li>
+                            <li>mixed precision training 적용</li>
+                            <li>학습 수행 및 결과 확인</li>
+                        </ul>
+
+                        <h2>3. 사용 기술</h2>
+                        <h3>PyTorch</h3>
+                        <ul>
+                            <li>모델 학습 및 코드 수정에 사용</li>
+                            <li>기존 연구 구현을 분석하고 실험 조건을 바꾸기 적합했음</li>
+                        </ul>
+
+                        <h3>First Order Motion Model</h3>
+                        <ul>
+                            <li>별도 자세 라벨 없이 motion transfer가 가능한 구조여서 사용</li>
+                            <li>전신 동작 전이 문제를 다루기에 적합했음</li>
+                        </ul>
+
+                        <h3>Mixed Precision Training</h3>
+                        <ul>
+                            <li>GPU 메모리 부담을 줄이고 학습 효율을 높이기 위해 적용</li>
+                            <li>제한된 자원에서도 학습이 가능하도록 개선</li>
+                        </ul>
+
+                        <h3>Python</h3>
+                        <ul>
+                            <li>데이터 전처리, 학습 코드 수정, 실험 관리에 사용</li>
+                        </ul>
+
+                        <h2>4. 구현 사항</h2>
+                        <ul>
+                            <li>First Order Motion Model의 keypoint detector / dense motion / generator 구조 분석</li>
+                            <li>전신 동작 표현에 맞게 keypoint 수를 10개에서 14개로 확장</li>
+                            <li>전신이 더 일관되게 들어오도록 bounding box 기준 조정</li>
+                            <li>학습 자원 부담을 줄이기 위해 mixed precision training 적용</li>
+                            <li>수정한 조건으로 학습을 수행하고 결과 비교 확인</li>
+                        </ul>
+
+                        <h2>5. 문제 해결 사례</h2>
+
+                        <h3>1) GPU 자원 부담으로 학습이 비효율적이던 문제</h3>
+                        <h4>상황</h4>
+                        <p>생성 모델 특성상 학습 시 메모리 사용량이 커 실험 부담이 컸다.</p>
+
+                        <h4>해결</h4>
+                        <ul>
+                            <li>mixed precision training 적용</li>
+                            <li>일부 연산을 낮은 정밀도로 처리해 GPU 자원 사용량 절감</li>
+                        </ul>
+
+                        <h4>성과</h4>
+                        <ul>
+                            <li>제한된 자원 환경에서도 학습 수행 가능</li>
+                            <li>학습 효율 개선</li>
+                        </ul>
+
+                        <h4>의미</h4>
+                        <ul>
+                            <li>단순 모델 사용이 아니라 학습 환경 자체를 최적화한 경험 확보</li>
+                        </ul>
+
+                        <h3>2) 전신 동작 특징이 충분히 반영되지 않는 문제</h3>
+                        <h4>상황</h4>
+                        <p>기존 keypoint 수와 입력 전처리만으로는 전신 움직임 표현이 부족하다고 판단했다.</p>
+
+                        <h4>해결</h4>
+                        <ul>
+                            <li>keypoint 수를 10개 → 14개로 확장</li>
+                            <li>bounding box 기준 조정으로 전신 입력 일관성 개선</li>
+                        </ul>
+
+                        <h4>성과</h4>
+                        <ul>
+                            <li>전신 동작을 더 잘 반영할 수 있는 입력 구조로 개선</li>
+                            <li>전처리와 모델 설정을 함께 조정한 실험 경험 확보</li>
+                        </ul>
+
+                        <h4>의미</h4>
+                        <ul>
+                            <li>AI 모델 성능은 구조뿐 아니라 입력 데이터 표현에도 크게 좌우된다는 점을 확인</li>
+                        </ul>
+
+                        <h2>6. 성과 및 결과</h2>
+                        <ul>
+                            <li>전신 동작 전이 모델 구조와 학습 흐름을 직접 분석하고 수정한 경험 확보</li>
+                            <li>keypoint 수 조정과 전처리 개선으로 전신 동작 표현에 맞는 실험 수행</li>
+                            <li>mixed precision 적용으로 제한된 GPU 환경에서도 학습 가능하도록 개선</li>
+                            <li>단순 재현이 아니라 데이터 표현, 학습 조건, 자원 효율을 함께 조정한 연구 경험 축적</li>
+                        </ul>
+                    </section>
+                </article>
+            </div>
+        </main>
+
+<footer class="site-footer outer">
+    <div class="site-footer-content inner">
+        <section class="copyright"><a href="https://siris-kang.github.io/portfolio/">SIRIS</a> &copy; 2026</section>
+        <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
+            <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
+            <a href="https://github.com/jekyllt/jasper2" target="_blank" rel="noopener">Jasper2</a></section>
+    </div>
+</footer>
+    </div>
+    <script src="/portfolio/assets/built/lightbox.js" defer></script>
+</body>
+</html>
+
+

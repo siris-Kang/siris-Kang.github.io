@@ -1,0 +1,338 @@
+/* Home-only layout: hero background, profile card, and overview teaser. */
+
+/* Home page background */
+.home-template {
+    background: #ffffff !important;
+}
+
+.home-template .site-wrapper {
+    position: relative;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.home-template .site-wrapper::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        linear-gradient(
+            180deg,
+            rgba(46, 60, 87, 0.36) 0%,
+            rgba(46, 60, 87, 0.24) 36%,
+            rgba(255, 255, 255, 0.36) 68%,
+            rgba(255, 255, 255, 0.70) 100%
+        ),
+        url(/portfolio/assets/built/images/sea.jpg);
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    content: "";
+    pointer-events: none;
+}
+
+.home-template .site-header,
+.home-template .site-main,
+.home-template .site-footer {
+    position: relative;
+    z-index: 1;
+}
+
+.home-hero {
+    background: transparent !important;
+    background-image: none !important;
+    background-color: transparent !important;
+    padding-top: 12px;
+    padding-bottom: 0.8rem;
+}
+
+.home-hero .site-header-content {
+    display: flex;
+    min-height: 200px;
+    max-height: none;
+    padding: 7vw 4vw 3.2vw;
+}
+
+.home-template .home-hero .site-nav {
+    top: 0;
+    height: auto;
+}
+
+.home-hero::before,
+.home-hero::after {
+    display: none !important;
+}
+
+.home-template .site-main.outer {
+    background: transparent !important;
+}
+
+.home-intro-panel {
+    position: relative;
+    z-index: 0;
+    padding-bottom: 4.4rem;
+    isolation: isolate;
+    background: transparent !important;
+}
+
+/* Profile summary card */
+.home-template .profile-summary-feed {
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.profile-summary-card {
+    flex: 1 1 100%;
+    min-height: 0;
+    margin: 0 auto 3.4rem;
+}
+
+.profile-summary-card,
+.profile-summary-link,
+.project-overview-linkcard,
+.profile-skill-logo-card {
+    background: #ffffff !important;
+}
+
+.profile-summary-link {
+    display: flex;
+    gap: 2.8rem;
+    align-items: center;
+    justify-content: center;
+    max-width: 1080px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 2.2rem 3.0rem;
+    color: inherit;
+    text-decoration: none;
+}
+
+.profile-summary-link:hover {
+    text-decoration: none;
+}
+
+.profile-passport {
+    flex: 0 0 auto;
+    width: 176px;
+    height: 226px;
+    object-fit: cover;
+    border: 1px solid #e5e8ed;
+    border-radius: 8px;
+    background: #f3f5f7;
+}
+
+.profile-summary-body {
+    min-width: 0;
+    flex: 0 1 640px;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.profile-summary-card .post-card-tags {
+    display: inline-block;
+    margin-bottom: 0.72rem;
+    color: #c1cbe2;
+    font-size: 1.0rem;
+    line-height: 1;
+    letter-spacing: 0.08em;
+}
+
+.home-template .post-feed .post-card.profile-summary-card h2.profile-summary-title {
+    display: inline;
+    min-width: 0;
+    width: auto;
+    max-width: max-content;
+    margin: 0.55rem 0 1.15rem 0;
+    color: var(--siris-color-title);
+    font-size: 2.05rem !important;
+    line-height: 1.28 !important;
+    letter-spacing: 0;
+    background: linear-gradient(transparent 58%, #eaecf2 0);
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+.home-template .post-feed .profile-summary-card .profile-summary-line {
+    margin: 1.05rem 0 0.42rem;
+    color: var(--siris-color-text);
+    font-size: 1.28rem !important;
+    line-height: 1.55 !important;
+}
+
+.profile-skill-logo-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: stretch;
+    margin-top: 1.15rem;
+}
+
+.profile-skill-logo-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    width: 68px;
+    min-height: 64px;
+    padding: 0.58rem 0.5rem;
+    border: 1px solid #e5e8ed;
+    border-radius: 8px;
+    background: #f2f4f9 !important;
+    text-align: center;
+}
+
+.profile-skill-logo-card img {
+    display: block;
+    width: 22px;
+    height: 22px;
+    margin: 0;
+    object-fit: contain;
+}
+
+.profile-skill-logo-name {
+    color: #2E3C57;
+    font-size: 0.82rem;
+    line-height: 1.25;
+    font-weight: 700;
+}
+
+/* Project overview teaser */
+.project-overview-teaser {
+    margin: 0 0 5.0rem;
+}
+
+.project-overview-linkcard {
+    display: grid;
+    grid-template-columns: minmax(200px, 280px) minmax(0, 1fr);
+    gap: 2.2rem;
+    align-items: start;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 2.2rem 2.6rem;
+    overflow: hidden;
+    border: 1px solid rgba(46, 60, 87, 0.08);
+    border-radius: 5px;
+    box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.06), 1px 3px 8px rgba(39, 44, 49, 0.03);
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.project-overview-linkcard:hover {
+    text-decoration: none;
+    box-shadow: 0 0 1px rgba(39, 44, 49, 0.1), 0 3px 16px rgba(39, 44, 49, 0.07);
+    transform: translate3d(0, -1px, 0);
+}
+
+.project-overview-copy .post-card-tags {
+    display: inline-block;
+    margin-bottom: 0.8rem;
+    color: var(--siris-color-muted);
+    font-size: 1.18rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.project-overview-linkcard h3.project-overview-title {
+    margin: 0;
+    color: #2E3C57;
+    font-size: 2.15rem;
+    font-weight: 800;
+    line-height: 1.25;
+}
+
+.project-overview-text {
+    margin: 0.9rem 0 0;
+    color: var(--siris-color-text-soft);
+    font-size: 1.35rem;
+    line-height: 1.6;
+}
+
+.project-overview-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.9rem;
+    margin-top: 0;
+}
+
+.project-overview-preview-grid img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    object-fit: cover;
+    border: 1px solid #e7edf1;
+    border-radius: 12px;
+}
+
+/* Home-only responsive rules */
+@media (max-width: 800px) {
+    .project-overview-linkcard {
+        grid-template-columns: 1fr;
+        gap: 1.4rem;
+        padding: 1.7rem 1.6rem;
+    }
+
+    .project-overview-linkcard h3.project-overview-title {
+        font-size: 2rem;
+    }
+
+    .project-overview-text {
+        font-size: 1.32rem;
+    }
+
+    .project-overview-preview-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.75rem;
+    }
+
+    .profile-summary-link {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.4rem;
+        height: auto;
+        padding: 1.55rem;
+    }
+
+    .profile-summary-body {
+        flex: 0 1 auto;
+        width: 100%;
+    }
+
+    .profile-skill-logo-list {
+        gap: 0.62rem;
+    }
+
+    .profile-skill-logo-card {
+        width: 64px;
+        min-height: 62px;
+        padding: 0.55rem 0.48rem;
+    }
+
+    .profile-skill-logo-card img {
+        width: 21px;
+        height: 21px;
+    }
+
+    .profile-skill-logo-name {
+        font-size: 0.8rem;
+    }
+
+    .profile-passport {
+        width: 160px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 560px) {
+    .project-overview-preview-grid img {
+        height: auto;
+    }
+}
